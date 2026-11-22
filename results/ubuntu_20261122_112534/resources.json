@@ -1,0 +1,2761 @@
+{
+  "environment": {
+    "os": "Ubuntu 24.04.5 LTS",
+    "kernel": "7.0.0-38-generic",
+    "arch": "x86_64",
+    "cpus": 4,
+    "bubblewrap": "bubblewrap 0.9.0",
+    "podman": "podman version 4.9.3",
+    "systemd": "systemd 255 (255.4-1ubuntu8.18)",
+    "python": "Python 3.12.3",
+    "series": "resources",
+    "backend": "both",
+    "repetitions": 3,
+    "shared_only": false,
+    "created_utc": "2026-11-22T12:20:56.748632+00:00"
+  },
+  "rows": [
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 64,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 137,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-ed0e40d4c5ce.service\npayload_started=1\n",
+      "stderr": "",
+      "elapsed_ms": 350.41,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-ed0e40d4c5ce.service",
+        "payload_started": "1"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 44183\nuser_usec 23636\nsystem_usec 20546\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9756672"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 44\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 104758\nuser_usec 30912\nsystem_usec 73846\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 3\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "67108864"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-ed0e40d4c5ce.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-ed0e40d4c5ce.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "memory_peak_mib": 64.0,
+      "observation": "OOM",
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 64,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 137,
+      "stdout": "lab_group=/\npayload_started=1\n",
+      "stderr": "",
+      "elapsed_ms": 689.43,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-9a9baeef3241.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 54471\nuser_usec 36663\nsystem_usec 17807\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9760768"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 39\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 352044\nuser_usec 105490\nsystem_usec 246554\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 7\nnr_throttled 1\nthrottled_usec 1503\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "67108864"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-9a9baeef3241.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-9a9baeef3241.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "memory_peak_mib": 64.0,
+      "observation": "OOM",
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 128,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 137,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-251cc533e1d6.service\npayload_started=1\n",
+      "stderr": "",
+      "elapsed_ms": 400.21,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-251cc533e1d6.service",
+        "payload_started": "1"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "134217728",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 66060\nuser_usec 43666\nsystem_usec 22393\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9756672"
+        },
+        "after": {
+          "memory.max": "134217728",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 47\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 165219\nuser_usec 51768\nsystem_usec 113450\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 3\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "134217728"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-251cc533e1d6.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-251cc533e1d6.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "memory_peak_mib": 128.0,
+      "observation": "OOM",
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 128,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 137,
+      "stdout": "lab_group=/\npayload_started=1\n",
+      "stderr": "",
+      "elapsed_ms": 624.25,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8fb65c89045a.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "134217728",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 40856\nuser_usec 26556\nsystem_usec 14299\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9781248"
+        },
+        "after": {
+          "memory.max": "134217728",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 40\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 353826\nuser_usec 79090\nsystem_usec 274735\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 6\nnr_throttled 1\nthrottled_usec 22551\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "134217728"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8fb65c89045a.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8fb65c89045a.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "memory_peak_mib": 128.0,
+      "observation": "OOM",
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-42142a55edb6.service\npayload_started=1\ntouched_mib=128\n",
+      "stderr": "",
+      "elapsed_ms": 389.95,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-42142a55edb6.service",
+        "payload_started": "1",
+        "touched_mib": "128"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 55952\nuser_usec 43884\nsystem_usec 12068\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9781248"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 147675\nuser_usec 98450\nsystem_usec 49225\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "145268736"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-42142a55edb6.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-42142a55edb6.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "memory_peak_mib": 138.54,
+      "observation": "128 MiB",
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\ntouched_mib=128\n",
+      "stderr": "",
+      "elapsed_ms": 611.22,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-7052b8387c1a.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "touched_mib": "128"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 37340\nuser_usec 17687\nsystem_usec 19652\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 368758\nuser_usec 73219\nsystem_usec 295539\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 6\nnr_throttled 1\nthrottled_usec 34196\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "154767360"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-7052b8387c1a.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-7052b8387c1a.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "memory_peak_mib": 147.6,
+      "observation": "128 MiB",
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 16,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-da7c245b9175.service\npayload_started=1\nchildren=12\nfork_errno=11\n",
+      "stderr": "",
+      "elapsed_ms": 315.44,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-da7c245b9175.service",
+        "payload_started": "1",
+        "children": "12",
+        "fork_errno": "11"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 55412\nuser_usec 41842\nsystem_usec 13570\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 1",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 73648\nuser_usec 45139\nsystem_usec 28508\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "11890688"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-da7c245b9175.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-da7c245b9175.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "observation": 12,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 16,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nchildren=5\nfork_errno=11\n",
+      "stderr": "",
+      "elapsed_ms": 20626.28,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-5a60d4f0c195.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "children": "5",
+        "fork_errno": "11"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 43551\nuser_usec 20495\nsystem_usec 23056\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 21",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 623863\nuser_usec 155965\nsystem_usec 467897\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 194\nnr_throttled 1\nthrottled_usec 27812\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "29048832"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-5a60d4f0c195.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-5a60d4f0c195.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 21,
+      "observation": 5,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 24,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-36aca92d7e7a.service\npayload_started=1\nchildren=20\nfork_errno=11\n",
+      "stderr": "",
+      "elapsed_ms": 317.11,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-36aca92d7e7a.service",
+        "payload_started": "1",
+        "children": "20",
+        "fork_errno": "11"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "24",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 58770\nuser_usec 40531\nsystem_usec 18238\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9781248"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "24",
+          "pids.events": "max 1",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 82689\nuser_usec 47705\nsystem_usec 34984\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 3\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "12910592"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-36aca92d7e7a.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-36aca92d7e7a.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "observation": 20,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 24,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nchildren=13\nfork_errno=11\n",
+      "stderr": "",
+      "elapsed_ms": 527.53,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-555feedf3fbc.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "children": "13",
+        "fork_errno": "11"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "24",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 43086\nuser_usec 23425\nsystem_usec 19661\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9756672"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "24",
+          "pids.events": "max 1",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 283148\nuser_usec 83017\nsystem_usec 200131\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 6\nnr_throttled 1\nthrottled_usec 23354\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "29523968"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-555feedf3fbc.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-555feedf3fbc.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "observation": 13,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-c1df145fdd39.service\npayload_started=1\nchildren=24\nfork_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 319.52,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-c1df145fdd39.service",
+        "payload_started": "1",
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 59616\nuser_usec 45588\nsystem_usec 14027\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9781248"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 80979\nuser_usec 48346\nsystem_usec 32633\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 3\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "13414400"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-c1df145fdd39.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-c1df145fdd39.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "observation": 24,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nchildren=24\nfork_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 512.21,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-88b6fd5fe943.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 47514\nuser_usec 20005\nsystem_usec 27508\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9781248"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 280808\nuser_usec 81393\nsystem_usec 199414\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 6\nnr_throttled 1\nthrottled_usec 24547\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "29929472"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-88b6fd5fe943.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-88b6fd5fe943.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "observation": 24,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 25
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-3eaa50b36775.service\npayload_started=1\nwall_us=1200000\ncpu_us=308774\n",
+      "stderr": "",
+      "elapsed_ms": 1581.23,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-3eaa50b36775.service",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "308774"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "25000 100000",
+          "cpu.stat": "usage_usec 40004\nuser_usec 22502\nsystem_usec 17501\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 5868\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9773056"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "25000 100000",
+          "cpu.stat": "usage_usec 377035\nuser_usec 342651\nsystem_usec 34383\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 16\nnr_throttled 14\nthrottled_usec 1030935\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "10895360"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-3eaa50b36775.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-3eaa50b36775.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 13,
+      "observation": 0.2573,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 25
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nwall_us=1200000\ncpu_us=317648\n",
+      "stderr": "",
+      "elapsed_ms": 2837.99,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-04a5ed8db45e.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "317648"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "25000 100000",
+          "cpu.stat": "usage_usec 39750\nuser_usec 23013\nsystem_usec 16736\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 25942\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9760768"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "25000 100000",
+          "cpu.stat": "usage_usec 669123\nuser_usec 444108\nsystem_usec 225015\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 29\nnr_throttled 25\nthrottled_usec 2844477\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "29831168"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-04a5ed8db45e.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-04a5ed8db45e.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 24,
+      "observation": 0.2647,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 50
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-22b5c6ca7711.service\npayload_started=1\nwall_us=1200000\ncpu_us=476880\n",
+      "stderr": "",
+      "elapsed_ms": 1511.78,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-22b5c6ca7711.service",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "476880"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 56002\nuser_usec 40629\nsystem_usec 15373\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 546663\nuser_usec 321566\nsystem_usec 225096\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 15\nnr_throttled 8\nthrottled_usec 722263\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "10813440"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-22b5c6ca7711.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-22b5c6ca7711.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 8,
+      "observation": 0.3974,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 50
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nwall_us=1477802\ncpu_us=558929\n",
+      "stderr": "",
+      "elapsed_ms": 2286.06,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-583d42a1f415.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "wall_us": "1477802",
+        "cpu_us": "558929"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 56939\nuser_usec 40332\nsystem_usec 16607\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9760768"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 862308\nuser_usec 308727\nsystem_usec 553580\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 24\nnr_throttled 15\nthrottled_usec 2839745\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "29786112"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-583d42a1f415.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-583d42a1f415.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 15,
+      "observation": 0.3782,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-46b6b15ea331.service\npayload_started=1\nwall_us=1200000\ncpu_us=997467\n",
+      "stderr": "",
+      "elapsed_ms": 1848.35,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-46b6b15ea331.service",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "997467"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 53122\nuser_usec 38735\nsystem_usec 14387\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9777152"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 1063446\nuser_usec 657657\nsystem_usec 405788\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 20\nnr_throttled 13\nthrottled_usec 636455\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "11149312"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-46b6b15ea331.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-46b6b15ea331.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 13,
+      "observation": 0.8312,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nwall_us=1200000\ncpu_us=1192514\n",
+      "stderr": "",
+      "elapsed_ms": 1711.38,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8031feec1291.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "1192514"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 57279\nuser_usec 40756\nsystem_usec 16522\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9756672"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 1474450\nuser_usec 1287825\nsystem_usec 186625\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 17\nnr_throttled 6\nthrottled_usec 36515\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "30101504"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8031feec1291.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8031feec1291.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 6,
+      "observation": 0.9938,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 64,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 137,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f09fb96a4032.service\npayload_started=1\n",
+      "stderr": "",
+      "elapsed_ms": 349.49,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f09fb96a4032.service",
+        "payload_started": "1"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 54634\nuser_usec 43921\nsystem_usec 10712\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 39\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 102855\nuser_usec 66553\nsystem_usec 36301\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 3\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "67108864"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f09fb96a4032.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f09fb96a4032.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "memory_peak_mib": 64.0,
+      "observation": "OOM",
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 64,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 137,
+      "stdout": "lab_group=/\npayload_started=1\n",
+      "stderr": "",
+      "elapsed_ms": 570.32,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8b2ecdb7b8c4.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 56212\nuser_usec 40598\nsystem_usec 15614\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9768960"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 52\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 311810\nuser_usec 119011\nsystem_usec 192798\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 5\nnr_throttled 1\nthrottled_usec 29230\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "67108864"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8b2ecdb7b8c4.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8b2ecdb7b8c4.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "memory_peak_mib": 64.0,
+      "observation": "OOM",
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 128,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 137,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-02438f72d921.service\npayload_started=1\n",
+      "stderr": "",
+      "elapsed_ms": 391.75,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-02438f72d921.service",
+        "payload_started": "1"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "134217728",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 57355\nuser_usec 36871\nsystem_usec 20484\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9756672"
+        },
+        "after": {
+          "memory.max": "134217728",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 46\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 148984\nuser_usec 46088\nsystem_usec 102895\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 4\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "134217728"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-02438f72d921.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-02438f72d921.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "memory_peak_mib": 128.0,
+      "observation": "OOM",
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 128,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 137,
+      "stdout": "lab_group=/\npayload_started=1\n",
+      "stderr": "",
+      "elapsed_ms": 602.43,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-a91fe9aaa403.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "134217728",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 41966\nuser_usec 22451\nsystem_usec 19514\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9760768"
+        },
+        "after": {
+          "memory.max": "134217728",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 29\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 346655\nuser_usec 81795\nsystem_usec 264860\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 7\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "134217728"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-a91fe9aaa403.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-a91fe9aaa403.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "memory_peak_mib": 128.0,
+      "observation": "OOM",
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-3d28603cf0b9.service\npayload_started=1\ntouched_mib=128\n",
+      "stderr": "",
+      "elapsed_ms": 419.97,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-3d28603cf0b9.service",
+        "payload_started": "1",
+        "touched_mib": "128"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 56422\nuser_usec 41232\nsystem_usec 15190\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9781248"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 177142\nuser_usec 50773\nsystem_usec 126368\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 4\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "145002496"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-3d28603cf0b9.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-3d28603cf0b9.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "memory_peak_mib": 138.29,
+      "observation": "128 MiB",
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\ntouched_mib=128\n",
+      "stderr": "",
+      "elapsed_ms": 642.34,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-3eaac44ee939.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "touched_mib": "128"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 56270\nuser_usec 41681\nsystem_usec 14588\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9760768"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 405227\nuser_usec 167624\nsystem_usec 237603\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 7\nnr_throttled 2\nthrottled_usec 51658\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "155095040"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-3eaac44ee939.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-3eaac44ee939.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "memory_peak_mib": 147.91,
+      "observation": "128 MiB",
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 16,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f34b9bb80586.service\npayload_started=1\nchildren=12\nfork_errno=11\n",
+      "stderr": "",
+      "elapsed_ms": 315.06,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f34b9bb80586.service",
+        "payload_started": "1",
+        "children": "12",
+        "fork_errno": "11"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 37598\nuser_usec 28198\nsystem_usec 9399\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 1",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 68845\nuser_usec 32510\nsystem_usec 36334\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 3\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "12079104"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f34b9bb80586.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f34b9bb80586.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "observation": 12,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 16,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nchildren=4\nfork_errno=11\n",
+      "stderr": "",
+      "elapsed_ms": 20583.53,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f6314e79976a.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "children": "4",
+        "fork_errno": "11"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 54023\nuser_usec 43634\nsystem_usec 10389\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9773056"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 21",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 542356\nuser_usec 165614\nsystem_usec 376742\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 194\nnr_throttled 1\nthrottled_usec 19005\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "25743360"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f6314e79976a.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f6314e79976a.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 21,
+      "observation": 4,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 24,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-1b760f3203c2.service\npayload_started=1\nchildren=20\nfork_errno=11\n",
+      "stderr": "",
+      "elapsed_ms": 320.77,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-1b760f3203c2.service",
+        "payload_started": "1",
+        "children": "20",
+        "fork_errno": "11"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "24",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 55740\nuser_usec 38676\nsystem_usec 17063\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9768960"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "24",
+          "pids.events": "max 1",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 81334\nuser_usec 43059\nsystem_usec 38275\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 3\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "13131776"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-1b760f3203c2.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-1b760f3203c2.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "observation": 20,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 24,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nchildren=13\nfork_errno=11\n",
+      "stderr": "",
+      "elapsed_ms": 507.64,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-c7b2d3cad861.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "children": "13",
+        "fork_errno": "11"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "24",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 56107\nuser_usec 43865\nsystem_usec 12241\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9760768"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "24",
+          "pids.events": "max 1",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 281130\nuser_usec 113417\nsystem_usec 167713\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 6\nnr_throttled 1\nthrottled_usec 25308\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "30318592"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-c7b2d3cad861.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-c7b2d3cad861.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "observation": 13,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-6a20063686cc.service\npayload_started=1\nchildren=24\nfork_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 314.89,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-6a20063686cc.service",
+        "payload_started": "1",
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 55573\nuser_usec 40318\nsystem_usec 15255\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 75639\nuser_usec 45624\nsystem_usec 30015\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 3\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "13131776"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-6a20063686cc.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-6a20063686cc.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "observation": 24,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nchildren=24\nfork_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 498.76,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-e250768bf569.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 57487\nuser_usec 31937\nsystem_usec 25550\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9760768"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 273089\nuser_usec 95758\nsystem_usec 177331\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 5\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "29745152"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-e250768bf569.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-e250768bf569.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "observation": 24,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 25
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-5a16771f4b95.service\npayload_started=1\nwall_us=1200000\ncpu_us=314654\n",
+      "stderr": "",
+      "elapsed_ms": 1595.66,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-5a16771f4b95.service",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "314654"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "25000 100000",
+          "cpu.stat": "usage_usec 37277\nuser_usec 24120\nsystem_usec 13156\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 47231\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9768960"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "25000 100000",
+          "cpu.stat": "usage_usec 380604\nuser_usec 360384\nsystem_usec 20219\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 16\nnr_throttled 14\nthrottled_usec 1011049\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "10817536"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-5a16771f4b95.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-5a16771f4b95.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 13,
+      "observation": 0.2622,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 25
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nwall_us=1200000\ncpu_us=297706\n",
+      "stderr": "",
+      "elapsed_ms": 2320.9,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-9eaa66cb1fb5.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "297706"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "25000 100000",
+          "cpu.stat": "usage_usec 59443\nuser_usec 41397\nsystem_usec 18045\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 2\nthrottled_usec 82227\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "25000 100000",
+          "cpu.stat": "usage_usec 584255\nuser_usec 432574\nsystem_usec 151681\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 26\nnr_throttled 23\nthrottled_usec 2536329\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "30167040"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-9eaa66cb1fb5.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-9eaa66cb1fb5.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 21,
+      "observation": 0.2481,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 50
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-677f78d6ebf7.service\npayload_started=1\nwall_us=1200000\ncpu_us=499241\n",
+      "stderr": "",
+      "elapsed_ms": 1510.48,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-677f78d6ebf7.service",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "499241"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 57558\nuser_usec 36352\nsystem_usec 21205\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9756672"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 569394\nuser_usec 303264\nsystem_usec 266130\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 16\nnr_throttled 9\nthrottled_usec 757437\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "11001856"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-677f78d6ebf7.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-677f78d6ebf7.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 9,
+      "observation": 0.416,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 50
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nwall_us=1239261\ncpu_us=499649\n",
+      "stderr": "",
+      "elapsed_ms": 2091.8,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-996fbfda3da4.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "wall_us": "1239261",
+        "cpu_us": "499649"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 44932\nuser_usec 27815\nsystem_usec 17117\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9773056"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 800222\nuser_usec 251921\nsystem_usec 548300\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 21\nnr_throttled 19\nthrottled_usec 2820949\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "30826496"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-996fbfda3da4.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-996fbfda3da4.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 19,
+      "observation": 0.4032,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-2b97b5fd4993.service\npayload_started=1\nwall_us=1200000\ncpu_us=1197520\n",
+      "stderr": "",
+      "elapsed_ms": 1512.24,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-2b97b5fd4993.service",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "1197520"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 42477\nuser_usec 22412\nsystem_usec 20064\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9752576"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 1258499\nuser_usec 1211442\nsystem_usec 47056\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 14\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "11063296"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-2b97b5fd4993.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-2b97b5fd4993.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "observation": 0.9979,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 2,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nwall_us=1200038\ncpu_us=1195778\n",
+      "stderr": "",
+      "elapsed_ms": 1718.89,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-5528820daaf5.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "wall_us": "1200038",
+        "cpu_us": "1195778"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 36938\nuser_usec 19441\nsystem_usec 17497\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9748480"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 1465908\nuser_usec 1320547\nsystem_usec 145360\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 17\nnr_throttled 6\nthrottled_usec 38943\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "29917184"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-5528820daaf5.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-5528820daaf5.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 6,
+      "observation": 0.9965,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 64,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 137,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-73e3fdf50855.service\npayload_started=1\n",
+      "stderr": "",
+      "elapsed_ms": 346.71,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-73e3fdf50855.service",
+        "payload_started": "1"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 55682\nuser_usec 33195\nsystem_usec 22486\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9768960"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 36\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 102558\nuser_usec 52881\nsystem_usec 49676\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "67108864"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-73e3fdf50855.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-73e3fdf50855.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "memory_peak_mib": 64.0,
+      "observation": "OOM",
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 64,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 137,
+      "stdout": "lab_group=/\npayload_started=1\n",
+      "stderr": "",
+      "elapsed_ms": 574.22,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-704e53833bf6.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 55114\nuser_usec 43455\nsystem_usec 11658\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 47\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 310926\nuser_usec 104040\nsystem_usec 206885\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 7\nnr_throttled 1\nthrottled_usec 147\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "67108864"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-704e53833bf6.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-704e53833bf6.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "memory_peak_mib": 64.0,
+      "observation": "OOM",
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 128,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 137,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-adc5fcea43dd.service\npayload_started=1\n",
+      "stderr": "",
+      "elapsed_ms": 394.13,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-adc5fcea43dd.service",
+        "payload_started": "1"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "134217728",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 41981\nuser_usec 28862\nsystem_usec 13119\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "134217728",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 42\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 142788\nuser_usec 49810\nsystem_usec 92978\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 4\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "134217728"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-adc5fcea43dd.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-adc5fcea43dd.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "memory_peak_mib": 128.0,
+      "observation": "OOM",
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 128,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 137,
+      "stdout": "lab_group=/\npayload_started=1\n",
+      "stderr": "",
+      "elapsed_ms": 615.26,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-c862805146ba.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "134217728",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 60176\nuser_usec 39738\nsystem_usec 20437\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9781248"
+        },
+        "after": {
+          "memory.max": "134217728",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 52\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 374369\nuser_usec 97146\nsystem_usec 277222\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 7\nnr_throttled 2\nthrottled_usec 9764\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "134217728"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-c862805146ba.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-c862805146ba.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "memory_peak_mib": 128.0,
+      "observation": "OOM",
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-d93c54310edc.service\npayload_started=1\ntouched_mib=128\n",
+      "stderr": "",
+      "elapsed_ms": 403.28,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-d93c54310edc.service",
+        "payload_started": "1",
+        "touched_mib": "128"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 57059\nuser_usec 41987\nsystem_usec 15072\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9760768"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 160833\nuser_usec 50394\nsystem_usec 110438\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 4\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "145047552"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-d93c54310edc.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-d93c54310edc.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "memory_peak_mib": 138.33,
+      "observation": "128 MiB",
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "memory",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\ntouched_mib=128\n",
+      "stderr": "",
+      "elapsed_ms": 621.52,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-d3e27ce04243.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "touched_mib": "128"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 54872\nuser_usec 41434\nsystem_usec 13438\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 362047\nuser_usec 105545\nsystem_usec 256501\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 7\nnr_throttled 2\nthrottled_usec 48390\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "155418624"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-d3e27ce04243.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-d3e27ce04243.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "memory_peak_mib": 148.22,
+      "observation": "128 MiB",
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 16,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-799dbdd74dfc.service\npayload_started=1\nchildren=12\nfork_errno=11\n",
+      "stderr": "",
+      "elapsed_ms": 314.62,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-799dbdd74dfc.service",
+        "payload_started": "1",
+        "children": "12",
+        "fork_errno": "11"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 57006\nuser_usec 42226\nsystem_usec 14779\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 1",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 73040\nuser_usec 48693\nsystem_usec 24346\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "11825152"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-799dbdd74dfc.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-799dbdd74dfc.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "observation": 12,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 16,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nchildren=4\nfork_errno=11\n",
+      "stderr": "",
+      "elapsed_ms": 20582.63,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-716bf20749fa.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "children": "4",
+        "fork_errno": "11"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 53637\nuser_usec 37217\nsystem_usec 16419\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9781248"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 21",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 543514\nuser_usec 149847\nsystem_usec 393667\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 197\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "21467136"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-716bf20749fa.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-716bf20749fa.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 21,
+      "observation": 4,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 24,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8df547273a58.service\npayload_started=1\nchildren=20\nfork_errno=11\n",
+      "stderr": "",
+      "elapsed_ms": 318.5,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8df547273a58.service",
+        "payload_started": "1",
+        "children": "20",
+        "fork_errno": "11"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "24",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 52858\nuser_usec 38835\nsystem_usec 14023\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9760768"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "24",
+          "pids.events": "max 1",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 78109\nuser_usec 46865\nsystem_usec 31243\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 3\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "12865536"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8df547273a58.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-8df547273a58.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "observation": 20,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 24,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nchildren=12\nfork_errno=11\n",
+      "stderr": "",
+      "elapsed_ms": 492.23,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f8886c0b0110.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "children": "12",
+        "fork_errno": "11"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "24",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 56092\nuser_usec 48541\nsystem_usec 7550\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9752576"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "24",
+          "pids.events": "max 1",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 260229\nuser_usec 112842\nsystem_usec 147386\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 6\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "30519296"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f8886c0b0110.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-f8886c0b0110.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 1,
+      "observation": 12,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-0fd211cce2e5.service\npayload_started=1\nchildren=24\nfork_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 322.29,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-0fd211cce2e5.service",
+        "payload_started": "1",
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 55806\nuser_usec 36170\nsystem_usec 19635\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 81743\nuser_usec 43023\nsystem_usec 38720\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "13398016"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-0fd211cce2e5.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-0fd211cce2e5.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "observation": 24,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nchildren=24\nfork_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 501.2,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-1928765c93b8.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 55820\nuser_usec 47846\nsystem_usec 7974\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 281534\nuser_usec 119936\nsystem_usec 161598\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 5\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "29958144"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-1928765c93b8.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-1928765c93b8.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "observation": 24,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 25
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-66574b5dc878.service\npayload_started=1\nwall_us=1200000\ncpu_us=322069\n",
+      "stderr": "",
+      "elapsed_ms": 1508.89,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-66574b5dc878.service",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "322069"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "25000 100000",
+          "cpu.stat": "usage_usec 62839\nuser_usec 42995\nsystem_usec 19844\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 2\nthrottled_usec 98008\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9760768"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "25000 100000",
+          "cpu.stat": "usage_usec 396068\nuser_usec 363954\nsystem_usec 32113\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 16\nnr_throttled 14\nthrottled_usec 974410\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "10809344"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-66574b5dc878.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-66574b5dc878.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 12,
+      "observation": 0.2684,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 25
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nwall_us=1200099\ncpu_us=301871\n",
+      "stderr": "",
+      "elapsed_ms": 2501.21,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-a527455daeba.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "wall_us": "1200099",
+        "cpu_us": "301871"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "25000 100000",
+          "cpu.stat": "usage_usec 61767\nuser_usec 49634\nsystem_usec 12132\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 3\nnr_throttled 2\nthrottled_usec 146315\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9756672"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "25000 100000",
+          "cpu.stat": "usage_usec 631535\nuser_usec 435621\nsystem_usec 195914\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 28\nnr_throttled 24\nthrottled_usec 2640695\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "29908992"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-a527455daeba.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-a527455daeba.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 22,
+      "observation": 0.2515,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 50
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-7abbad832e7d.service\npayload_started=1\nwall_us=1200000\ncpu_us=619824\n",
+      "stderr": "",
+      "elapsed_ms": 1512.89,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-7abbad832e7d.service",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "619824"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 56909\nuser_usec 39319\nsystem_usec 17590\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 7430\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9760768"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 687960\nuser_usec 658416\nsystem_usec 29544\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 15\nnr_throttled 13\nthrottled_usec 586347\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "10817536"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-7abbad832e7d.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-7abbad832e7d.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 12,
+      "observation": 0.5165,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 50
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nwall_us=1200014\ncpu_us=599790\n",
+      "stderr": "",
+      "elapsed_ms": 2013.3,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-9c2bd16452c1.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "wall_us": "1200014",
+        "cpu_us": "599790"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 55353\nuser_usec 43052\nsystem_usec 12300\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9760768"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 908669\nuser_usec 712261\nsystem_usec 196407\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 20\nnr_throttled 17\nthrottled_usec 1203893\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "29384704"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-9c2bd16452c1.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-9c2bd16452c1.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 17,
+      "observation": 0.4998,
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-251a826a07d7.service\npayload_started=1\nwall_us=1200000\ncpu_us=1199940\n",
+      "stderr": "",
+      "elapsed_ms": 1509.6,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-251a826a07d7.service",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "1199940"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 54893\nuser_usec 34606\nsystem_usec 20286\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9764864"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 1265691\nuser_usec 1243204\nsystem_usec 22486\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 15\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "11034624"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-251a826a07d7.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-251a826a07d7.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "observation": 1.0,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "cpu",
+      "repetition": 3,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nwall_us=1200000\ncpu_us=1192803\n",
+      "stderr": "",
+      "elapsed_ms": 1700.72,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-7f89c686db28.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "wall_us": "1200000",
+        "cpu_us": "1192803"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 42896\nuser_usec 35824\nsystem_usec 7072\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9768960"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 1479589\nuser_usec 1333964\nsystem_usec 145624\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 17\nnr_throttled 6\nthrottled_usec 12153\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "30318592"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-7f89c686db28.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-7f89c686db28.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 6,
+      "observation": 0.994,
+      "status": "PASS"
+    }
+  ]
+}

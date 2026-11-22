@@ -1,0 +1,3381 @@
+{
+  "environment": {
+    "started_utc": "2026-11-22T11:43:49.586330+00:00",
+    "os": "Ubuntu 24.04.5 LTS",
+    "kernel": "7.0.0-38-generic",
+    "architecture": "x86_64",
+    "python": "3.12.3",
+    "bubblewrap": "bubblewrap 0.9.0",
+    "systemd": "systemd 255 (255.4-1ubuntu8.18)",
+    "net_backend": "bwrap",
+    "unshare": "unshare from util-linux 2.39.3",
+    "cgroup_mount_present": true,
+    "host_namespaces": {
+      "mnt": "mnt:[4026531832]",
+      "pid": "pid:[4026531836]",
+      "user": "user:[4026531837]",
+      "net": "net:[4026531833]",
+      "ipc": "ipc:[4026531839]",
+      "uts": "uts:[4026531838]"
+    },
+    "repetitions": 5,
+    "smoke": false
+  },
+  "rows": [
+    {
+      "repetition": 1,
+      "profile": 0,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 0,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 0,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026531832]",
+        "ns_pid": "pid:[4026531836]",
+        "ns_user": "user:[4026531837]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026531839]",
+        "ns_uts": "uts:[4026531838]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "0",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026531832]\nns_pid=pid:[4026531836]\nns_user=user:[4026531837]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026531839]\nns_uts=uts:[4026531838]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=0\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 0,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 1,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 1,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 1,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532849]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532849]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 1,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 2,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 2,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 2,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532849]",
+        "ns_user": "user:[4026532846]",
+        "ns_net": "net:[4026532850]",
+        "ns_ipc": "ipc:[4026532848]",
+        "ns_uts": "uts:[4026532847]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532849]\nns_user=user:[4026532846]\nns_net=net:[4026532850]\nns_ipc=ipc:[4026532848]\nns_uts=uts:[4026532847]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 2,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532852]",
+        "socket_errno": "0",
+        "connect_errno": "111",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532852]\nsocket_errno=0\nconnect_errno=111\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 3,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 3,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 3,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532846]",
+        "ns_pid": "pid:[4026532849]",
+        "ns_user": "user:[4026532850]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026532848]",
+        "ns_uts": "uts:[4026532847]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532846]\nns_pid=pid:[4026532849]\nns_user=user:[4026532850]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026532848]\nns_uts=uts:[4026532847]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 3,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532849]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532849]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1197841"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1197841\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9982,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 5,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 45749\\nuser_usec 29410\\nsystem_usec 16338\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 65365\\nuser_usec 33909\\nsystem_usec 31455\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 45490\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 45749\nuser_usec 29410\nsystem_usec 16338\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 65365\nuser_usec 33909\nsystem_usec 31455\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 45490\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 5,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 65253\\nuser_usec 44861\\nsystem_usec 20391\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 50789\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 76105\\nuser_usec 50041\\nsystem_usec 26063\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 50789\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 65253\nuser_usec 44861\nsystem_usec 20391\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 50789\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 76105\nuser_usec 50041\nsystem_usec 26063\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 50789\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 5,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 62167\\nuser_usec 46343\\nsystem_usec 15824\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 613\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 75508\\nuser_usec 51911\\nsystem_usec 23596\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 613\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 62167\nuser_usec 46343\nsystem_usec 15824\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 613\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 75508\nuser_usec 51911\nsystem_usec 23596\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 613\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 5,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532849]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532849]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 71777\\nuser_usec 54452\\nsystem_usec 17325\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 26572\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 85086\\nuser_usec 58345\\nsystem_usec 26741\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 26572\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 71777\nuser_usec 54452\nsystem_usec 17325\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 26572\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 85086\nuser_usec 58345\nsystem_usec 26741\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 26572\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 5,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "12",
+        "fork_errno": "11"
+      },
+      "stdout": "children=12\nfork_errno=11\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 67082\\nuser_usec 47915\\nsystem_usec 19166\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 34002\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 1\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 85261\\nuser_usec 54567\\nsystem_usec 30694\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 34002\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 67082\nuser_usec 47915\nsystem_usec 19166\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 34002\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 1",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 85261\nuser_usec 54567\nsystem_usec 30694\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 34002\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 5,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 68419\\nuser_usec 54735\\nsystem_usec 13683\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 49552\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 93003\\nuser_usec 58795\\nsystem_usec 34208\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 49552\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 68419\nuser_usec 54735\nsystem_usec 13683\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 49552\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 93003\nuser_usec 58795\nsystem_usec 34208\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 49552\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 5,
+      "test": "memory128",
+      "returncode": 137,
+      "values": {},
+      "stdout": "",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 63635\\nuser_usec 45772\\nsystem_usec 17862\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 13890\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 37\\noom 1\\noom_kill 1\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 118334\\nuser_usec 53084\\nsystem_usec 65250\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 2\\nthrottled_usec 66346\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 63635\nuser_usec 45772\nsystem_usec 17862\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 13890\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 37\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 118334\nuser_usec 53084\nsystem_usec 65250\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 2\nthrottled_usec 66346\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 5,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "2898910",
+        "cpu_us": "1049910"
+      },
+      "stdout": "wall_us=2898910\ncpu_us=1049910\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 63938\\nuser_usec 41850\\nsystem_usec 22087\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 1128488\\nuser_usec 816548\\nsystem_usec 311939\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 31\\nnr_throttled 20\\nthrottled_usec 1893039\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 63938\nuser_usec 41850\nsystem_usec 22087\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 1128488\nuser_usec 816548\nsystem_usec 311939\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 31\nnr_throttled 20\nthrottled_usec 1893039\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "cpu_ratio": 0.3622,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 0,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 0,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 0,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026531832]",
+        "ns_pid": "pid:[4026531836]",
+        "ns_user": "user:[4026531837]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026531839]",
+        "ns_uts": "uts:[4026531838]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "0",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026531832]\nns_pid=pid:[4026531836]\nns_user=user:[4026531837]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026531839]\nns_uts=uts:[4026531838]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=0\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 0,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 1,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 1,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 1,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532849]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532849]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 1,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 2,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 2,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 2,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 2,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532849]",
+        "socket_errno": "0",
+        "connect_errno": "111",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532849]\nsocket_errno=0\nconnect_errno=111\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 3,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 3,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 3,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532846]",
+        "ns_pid": "pid:[4026532850]",
+        "ns_user": "user:[4026532851]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026532848]",
+        "ns_uts": "uts:[4026532847]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532846]\nns_pid=pid:[4026532850]\nns_user=user:[4026532851]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026532848]\nns_uts=uts:[4026532847]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 3,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532849]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532849]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1199408"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1199408\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9995,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 5,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 61712\\nuser_usec 46022\\nsystem_usec 15689\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 51130\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 72893\\nuser_usec 50804\\nsystem_usec 22088\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 51130\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 61712\nuser_usec 46022\nsystem_usec 15689\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 51130\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 72893\nuser_usec 50804\nsystem_usec 22088\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 51130\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 5,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 56905\\nuser_usec 39933\\nsystem_usec 16971\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 68659\\nuser_usec 43692\\nsystem_usec 24967\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 56905\nuser_usec 39933\nsystem_usec 16971\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 68659\nuser_usec 43692\nsystem_usec 24967\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 5,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 67516\\nuser_usec 45362\\nsystem_usec 22153\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 8218\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 79080\\nuser_usec 48089\\nsystem_usec 30990\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 8218\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 67516\nuser_usec 45362\nsystem_usec 22153\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 8218\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 79080\nuser_usec 48089\nsystem_usec 30990\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 8218\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 5,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532849]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532849]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 52183\\nuser_usec 29819\\nsystem_usec 22364\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 33503\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 69266\\nuser_usec 30015\\nsystem_usec 39250\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 33503\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 52183\nuser_usec 29819\nsystem_usec 22364\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 33503\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 69266\nuser_usec 30015\nsystem_usec 39250\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 33503\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 5,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "12",
+        "fork_errno": "11"
+      },
+      "stdout": "children=12\nfork_errno=11\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 62336\\nuser_usec 44065\\nsystem_usec 18271\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 1\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 81923\\nuser_usec 50246\\nsystem_usec 31677\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 62336\nuser_usec 44065\nsystem_usec 18271\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 1",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 81923\nuser_usec 50246\nsystem_usec 31677\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 5,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 63582\\nuser_usec 44184\\nsystem_usec 19398\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 47426\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 87687\\nuser_usec 51443\\nsystem_usec 36244\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 47426\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 63582\nuser_usec 44184\nsystem_usec 19398\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 47426\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 87687\nuser_usec 51443\nsystem_usec 36244\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 47426\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 5,
+      "test": "memory128",
+      "returncode": 137,
+      "values": {},
+      "stdout": "",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 70266\\nuser_usec 42366\\nsystem_usec 27899\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 17840\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 36\\noom 1\\noom_kill 1\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 126944\\nuser_usec 48507\\nsystem_usec 78437\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 2\\nthrottled_usec 70782\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 70266\nuser_usec 42366\nsystem_usec 27899\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 17840\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 36\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 126944\nuser_usec 48507\nsystem_usec 78437\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 2\nthrottled_usec 70782\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 5,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "594606"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=594606\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 66309\\nuser_usec 50003\\nsystem_usec 16305\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 18492\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 675620\\nuser_usec 647648\\nsystem_usec 27971\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 13\\nnr_throttled 13\\nthrottled_usec 621855\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 66309\nuser_usec 50003\nsystem_usec 16305\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 18492\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 675620\nuser_usec 647648\nsystem_usec 27971\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 13\nnr_throttled 13\nthrottled_usec 621855\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "cpu_ratio": 0.4955,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 0,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 0,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 0,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026531832]",
+        "ns_pid": "pid:[4026531836]",
+        "ns_user": "user:[4026531837]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026531839]",
+        "ns_uts": "uts:[4026531838]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "0",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026531832]\nns_pid=pid:[4026531836]\nns_user=user:[4026531837]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026531839]\nns_uts=uts:[4026531838]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=0\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 0,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 1,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 1,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 1,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532846]",
+        "ns_pid": "pid:[4026532849]",
+        "ns_user": "user:[4026532850]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026532848]",
+        "ns_uts": "uts:[4026532847]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532846]\nns_pid=pid:[4026532849]\nns_user=user:[4026532850]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026532848]\nns_uts=uts:[4026532847]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 1,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 2,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 2,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 2,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 2,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532849]",
+        "socket_errno": "0",
+        "connect_errno": "111",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532849]\nsocket_errno=0\nconnect_errno=111\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 3,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 3,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 3,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532849]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532849]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 3,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532849]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532849]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1199148"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1199148\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9993,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 5,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 62599\\nuser_usec 46684\\nsystem_usec 15915\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 73943\\nuser_usec 50767\\nsystem_usec 23176\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 62599\nuser_usec 46684\nsystem_usec 15915\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 73943\nuser_usec 50767\nsystem_usec 23176\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 5,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 64361\\nuser_usec 39689\\nsystem_usec 24671\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 75966\\nuser_usec 42937\\nsystem_usec 33028\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 64361\nuser_usec 39689\nsystem_usec 24671\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 75966\nuser_usec 42937\nsystem_usec 33028\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 5,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 61033\\nuser_usec 37240\\nsystem_usec 23792\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 73547\\nuser_usec 41570\\nsystem_usec 31977\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 61033\nuser_usec 37240\nsystem_usec 23792\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 73547\nuser_usec 41570\nsystem_usec 31977\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 5,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532849]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532849]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 60927\\nuser_usec 45982\\nsystem_usec 14944\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 75965\\nuser_usec 51422\\nsystem_usec 24542\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 98907\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 60927\nuser_usec 45982\nsystem_usec 14944\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 75965\nuser_usec 51422\nsystem_usec 24542\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 98907\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 5,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "12",
+        "fork_errno": "11"
+      },
+      "stdout": "children=12\nfork_errno=11\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 56396\\nuser_usec 34496\\nsystem_usec 21899\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 1\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 80110\\nuser_usec 34496\\nsystem_usec 45613\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 56396\nuser_usec 34496\nsystem_usec 21899\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 1",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 80110\nuser_usec 34496\nsystem_usec 45613\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 5,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 62252\\nuser_usec 45274\\nsystem_usec 16978\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 45292\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 89220\\nuser_usec 53284\\nsystem_usec 35936\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 45292\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 62252\nuser_usec 45274\nsystem_usec 16978\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 45292\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 89220\nuser_usec 53284\nsystem_usec 35936\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 45292\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 5,
+      "test": "memory128",
+      "returncode": 137,
+      "values": {},
+      "stdout": "",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 65180\\nuser_usec 48359\\nsystem_usec 16820\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 27934\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 38\\noom 1\\noom_kill 1\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 117776\\nuser_usec 54443\\nsystem_usec 63332\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 2\\nthrottled_usec 80627\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 65180\nuser_usec 48359\nsystem_usec 16820\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 27934\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 38\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 117776\nuser_usec 54443\nsystem_usec 63332\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 2\nthrottled_usec 80627\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 5,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "595003"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=595003\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 50602\\nuser_usec 32755\\nsystem_usec 17846\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 12953\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 669711\\nuser_usec 644611\\nsystem_usec 25099\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 13\\nnr_throttled 13\\nthrottled_usec 620444\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 50602\nuser_usec 32755\nsystem_usec 17846\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 12953\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 669711\nuser_usec 644611\nsystem_usec 25099\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 13\nnr_throttled 13\nthrottled_usec 620444\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "cpu_ratio": 0.4958,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 0,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 0,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 0,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026531832]",
+        "ns_pid": "pid:[4026531836]",
+        "ns_user": "user:[4026531837]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026531839]",
+        "ns_uts": "uts:[4026531838]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "0",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026531832]\nns_pid=pid:[4026531836]\nns_user=user:[4026531837]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026531839]\nns_uts=uts:[4026531838]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=0\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 0,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 1,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 1,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 1,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532846]",
+        "ns_pid": "pid:[4026532849]",
+        "ns_user": "user:[4026532850]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026532848]",
+        "ns_uts": "uts:[4026532847]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532846]\nns_pid=pid:[4026532849]\nns_user=user:[4026532850]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026532848]\nns_uts=uts:[4026532847]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 1,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 2,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 2,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 2,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 2,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532850]",
+        "socket_errno": "0",
+        "connect_errno": "111",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532850]\nsocket_errno=0\nconnect_errno=111\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 3,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 3,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 3,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532849]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532849]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 3,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532849]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532849]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200071",
+        "cpu_us": "1199441"
+      },
+      "stdout": "wall_us=1200071\ncpu_us=1199441\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9995,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 5,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 51564\\nuser_usec 29501\\nsystem_usec 22063\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 70418\\nuser_usec 31801\\nsystem_usec 38616\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 58431\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 51564\nuser_usec 29501\nsystem_usec 22063\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 70418\nuser_usec 31801\nsystem_usec 38616\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 58431\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 5,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 61436\\nuser_usec 46346\\nsystem_usec 15089\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 48448\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 71693\\nuser_usec 50736\\nsystem_usec 20956\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 48448\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 61436\nuser_usec 46346\nsystem_usec 15089\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 48448\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 71693\nuser_usec 50736\nsystem_usec 20956\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 48448\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 5,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 64880\\nuser_usec 49907\\nsystem_usec 14972\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 77244\\nuser_usec 51080\\nsystem_usec 26163\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 64880\nuser_usec 49907\nsystem_usec 14972\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 77244\nuser_usec 51080\nsystem_usec 26163\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 5,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532849]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532849]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 57718\\nuser_usec 41907\\nsystem_usec 15810\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 74397\\nuser_usec 41907\\nsystem_usec 32490\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 57718\nuser_usec 41907\nsystem_usec 15810\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 74397\nuser_usec 41907\nsystem_usec 32490\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 5,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "12",
+        "fork_errno": "11"
+      },
+      "stdout": "children=12\nfork_errno=11\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 47885\\nuser_usec 26603\\nsystem_usec 21282\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 0\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 1\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 73012\\nuser_usec 27916\\nsystem_usec 45096\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 14659\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 47885\nuser_usec 26603\nsystem_usec 21282\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 1",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 73012\nuser_usec 27916\nsystem_usec 45096\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 14659\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 5,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 63111\\nuser_usec 47610\\nsystem_usec 15501\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 89797\\nuser_usec 50013\\nsystem_usec 39783\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 47458\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 63111\nuser_usec 47610\nsystem_usec 15501\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 89797\nuser_usec 50013\nsystem_usec 39783\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 47458\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 5,
+      "test": "memory128",
+      "returncode": 137,
+      "values": {},
+      "stdout": "",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 70726\\nuser_usec 53316\\nsystem_usec 17409\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 47164\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 43\\noom 1\\noom_kill 1\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 127617\\nuser_usec 58983\\nsystem_usec 68634\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 3\\nnr_throttled 2\\nthrottled_usec 99979\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 70726\nuser_usec 53316\nsystem_usec 17409\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 47164\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 43\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 127617\nuser_usec 58983\nsystem_usec 68634\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 3\nnr_throttled 2\nthrottled_usec 99979\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 5,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200130",
+        "cpu_us": "594091"
+      },
+      "stdout": "wall_us=1200130\ncpu_us=594091\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 64795\\nuser_usec 49367\\nsystem_usec 15427\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 13431\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 675513\\nuser_usec 632170\\nsystem_usec 43342\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 13\\nnr_throttled 13\\nthrottled_usec 623520\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 64795\nuser_usec 49367\nsystem_usec 15427\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 13431\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 675513\nuser_usec 632170\nsystem_usec 43342\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 13\nnr_throttled 13\nthrottled_usec 623520\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "cpu_ratio": 0.495,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 0,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 0,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 0,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026531832]",
+        "ns_pid": "pid:[4026531836]",
+        "ns_user": "user:[4026531837]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026531839]",
+        "ns_uts": "uts:[4026531838]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "0",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026531832]\nns_pid=pid:[4026531836]\nns_user=user:[4026531837]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026531839]\nns_uts=uts:[4026531838]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=0\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 0,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 1,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 1,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 1,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532846]",
+        "ns_pid": "pid:[4026532849]",
+        "ns_user": "user:[4026532850]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026532848]",
+        "ns_uts": "uts:[4026532847]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532846]\nns_pid=pid:[4026532849]\nns_user=user:[4026532850]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026532848]\nns_uts=uts:[4026532847]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 1,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 2,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 2,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 2,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "0"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 2,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532849]",
+        "socket_errno": "0",
+        "connect_errno": "111",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532849]\nsocket_errno=0\nconnect_errno=111\nipv6_socket_errno=0\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 3,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 3,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 3,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532849]",
+        "ns_net": "net:[4026531833]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532849]\nns_net=net:[4026531833]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 3,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026531833]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026531833]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532850]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532850]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1199338"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1199338\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9994,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 5,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 58849\\nuser_usec 41873\\nsystem_usec 16975\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 73984\\nuser_usec 47396\\nsystem_usec 26588\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 1\\nthrottled_usec 41291\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 58849\nuser_usec 41873\nsystem_usec 16975\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 73984\nuser_usec 47396\nsystem_usec 26588\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 1\nthrottled_usec 41291\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 5,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 58426\\nuser_usec 24718\\nsystem_usec 33707\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 21587\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 69773\\nuser_usec 29600\\nsystem_usec 40172\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 21587\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 58426\nuser_usec 24718\nsystem_usec 33707\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 21587\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 69773\nuser_usec 29600\nsystem_usec 40172\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 21587\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 5,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532845]",
+        "ns_pid": "pid:[4026532848]",
+        "ns_user": "user:[4026532961]",
+        "ns_net": "net:[4026532849]",
+        "ns_ipc": "ipc:[4026532847]",
+        "ns_uts": "uts:[4026532846]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532845]\nns_pid=pid:[4026532848]\nns_user=user:[4026532961]\nns_net=net:[4026532849]\nns_ipc=ipc:[4026532847]\nns_uts=uts:[4026532846]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 61716\\nuser_usec 39184\\nsystem_usec 22531\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 9500\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 74682\\nuser_usec 44809\\nsystem_usec 29873\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 9500\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 61716\nuser_usec 39184\nsystem_usec 22531\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 9500\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 74682\nuser_usec 44809\nsystem_usec 29873\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 9500\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 5,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "net_ns": "net:[4026532849]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "0"
+      },
+      "stdout": "net_ns=net:[4026532849]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=0\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 50830\\nuser_usec 36764\\nsystem_usec 14066\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 1562\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 67886\\nuser_usec 36764\\nsystem_usec 31121\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 1562\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 50830\nuser_usec 36764\nsystem_usec 14066\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 1562\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 67886\nuser_usec 36764\nsystem_usec 31121\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 1562\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 5,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "12",
+        "fork_errno": "11"
+      },
+      "stdout": "children=12\nfork_errno=11\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 52488\\nuser_usec 26244\\nsystem_usec 26244\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 41623\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 1\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 79915\\nuser_usec 26244\\nsystem_usec 53670\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 41623\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 52488\nuser_usec 26244\nsystem_usec 26244\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 41623\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 1",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 79915\nuser_usec 26244\nsystem_usec 53670\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 41623\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 5,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 66587\\nuser_usec 46611\\nsystem_usec 19976\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 29006\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 89471\\nuser_usec 51445\\nsystem_usec 38025\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 1\\nthrottled_usec 29006\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 66587\nuser_usec 46611\nsystem_usec 19976\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 29006\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 89471\nuser_usec 51445\nsystem_usec 38025\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 1\nthrottled_usec 29006\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 5,
+      "test": "memory128",
+      "returncode": 137,
+      "values": {},
+      "stdout": "",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 48779\\nuser_usec 23329\\nsystem_usec 25450\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 0\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 36\\noom 1\\noom_kill 1\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 119047\\nuser_usec 30812\\nsystem_usec 88235\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 2\\nnr_throttled 2\\nthrottled_usec 97843\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 48779\nuser_usec 23329\nsystem_usec 25450\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 36\noom 1\noom_kill 1\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 119047\nuser_usec 30812\nsystem_usec 88235\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 2\nnr_throttled 2\nthrottled_usec 97843\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 5,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "594790"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=594790\n",
+      "stderr": "LAB_CGROUP {\"before\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 67020\\nuser_usec 49441\\nsystem_usec 17579\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 1\\nnr_throttled 0\\nthrottled_usec 0\\nnr_bursts 0\\nburst_usec 0\"}, \"after\": {\"memory.max\": \"67108864\", \"memory.swap.max\": \"0\", \"memory.events\": \"low 0\\nhigh 0\\nmax 0\\noom 0\\noom_kill 0\\noom_group_kill 0\\nsock_throttled 0\", \"pids.max\": \"16\", \"pids.events\": \"max 0\", \"cpu.max\": \"50000 100000\", \"cpu.stat\": \"usage_usec 678734\\nuser_usec 641616\\nsystem_usec 37118\\nnice_usec 0\\ncore_sched.force_idle_usec 0\\nnr_periods 13\\nnr_throttled 12\\nthrottled_usec 601346\\nnr_bursts 0\\nburst_usec 0\"}}\n",
+      "cgroup": {
+        "before": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 67020\nuser_usec 49441\nsystem_usec 17579\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0"
+        },
+        "after": {
+          "memory.max": "67108864",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "16",
+          "pids.events": "max 0",
+          "cpu.max": "50000 100000",
+          "cpu.stat": "usage_usec 678734\nuser_usec 641616\nsystem_usec 37118\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 13\nnr_throttled 12\nthrottled_usec 601346\nnr_bursts 0\nburst_usec 0"
+        }
+      },
+      "cpu_ratio": 0.4957,
+      "status": "PASS"
+    }
+  ]
+}

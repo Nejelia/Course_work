@@ -1,0 +1,116 @@
+backend,mode,case,repetition,status,returncode,elapsed_ms,limits,observation,event_delta,memory_peak_mib,in_expected_group,reason,values
+host,shared,hello,1,PASS,0,1.18,,,,,,,"{""hello"": ""1""}"
+host,shared,files,1,PASS,0,1.77,,,,,,,"{""hidden_errno"": ""0"", ""input_read"": ""1"", ""input_write_errno"": ""0"", ""scratch_errno"": ""0""}"
+host,shared,pid,1,PASS,0,3.91,,,,,,,"{""sentinel_visible"": ""1"", ""ns_mnt"": ""mnt:[4026531832]"", ""ns_pid"": ""pid:[4026531836]"", ""ns_user"": ""user:[4026531837]"", ""ns_net"": ""net:[4026531833]"", ""ns_ipc"": ""ipc:[4026531839]"", ""ns_uts"": ""uts:[4026531838]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""0"", ""Seccomp_filters"": ""0""}"
+host,shared,net,1,PASS,0,1.44,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+host,shared,csv,1,PASS,0,18.42,,,,,,,{}
+bubblewrap,shared,net,1,PASS,0,7.15,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+bubblewrap,net,net,1,PASS,0,7.29,,,,,,,"{""net_ns"": ""net:[4026532853]"", ""socket_errno"": ""0"", ""connect_errno"": ""111"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+bubblewrap,filter,net,1,PASS,0,6.29,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+bubblewrap,full,net,1,PASS,0,6.82,,,,,,,"{""net_ns"": ""net:[4026532968]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+bubblewrap,full,hello,1,PASS,0,8.1,,,,,,,"{""hello"": ""1""}"
+bubblewrap,full,files,1,PASS,0,7.06,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+bubblewrap,full,pid,1,PASS,0,6.67,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532849]"", ""ns_pid"": ""pid:[4026532852]"", ""ns_user"": ""user:[4026533080]"", ""ns_net"": ""net:[4026532966]"", ""ns_ipc"": ""ipc:[4026532851]"", ""ns_uts"": ""uts:[4026532850]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+bubblewrap,full,csv,1,PASS,0,78.48,,,,,,,{}
+bubblewrap,full,csv_missing,1,PASS,2,77.01,,,,,,,{}
+podman,shared,net,1,PASS,0,233.26,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+podman,net,net,1,PASS,0,259.73,,,,,,,"{""net_ns"": ""net:[4026532848]"", ""socket_errno"": ""0"", ""connect_errno"": ""111"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+podman,filter,net,1,PASS,0,216.7,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+podman,full,net,1,PASS,0,253.2,,,,,,,"{""net_ns"": ""net:[4026532848]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+podman,full,hello,1,PASS,0,227.26,,,,,,,"{""hello"": ""1""}"
+podman,full,files,1,PASS,0,224.63,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+podman,full,pid,1,PASS,0,235.29,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532844]"", ""ns_pid"": ""pid:[4026532847]"", ""ns_user"": ""user:[4026532839]"", ""ns_net"": ""net:[4026532848]"", ""ns_ipc"": ""ipc:[4026532846]"", ""ns_uts"": ""uts:[4026532845]"", ""uid"": ""0"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+podman,full,csv,1,PASS,0,329.2,,,,,,,{}
+podman,full,csv_missing,1,PASS,2,305.42,,,,,,,{}
+host,shared,hello,2,PASS,0,1.41,,,,,,,"{""hello"": ""1""}"
+host,shared,files,2,PASS,0,1.73,,,,,,,"{""hidden_errno"": ""0"", ""input_read"": ""1"", ""input_write_errno"": ""0"", ""scratch_errno"": ""0""}"
+host,shared,pid,2,PASS,0,3.68,,,,,,,"{""sentinel_visible"": ""1"", ""ns_mnt"": ""mnt:[4026531832]"", ""ns_pid"": ""pid:[4026531836]"", ""ns_user"": ""user:[4026531837]"", ""ns_net"": ""net:[4026531833]"", ""ns_ipc"": ""ipc:[4026531839]"", ""ns_uts"": ""uts:[4026531838]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""0"", ""Seccomp_filters"": ""0""}"
+host,shared,net,2,PASS,0,1.5,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+host,shared,csv,2,PASS,0,20.58,,,,,,,{}
+bubblewrap,shared,net,2,PASS,0,6.8,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+bubblewrap,net,net,2,PASS,0,7.11,,,,,,,"{""net_ns"": ""net:[4026532853]"", ""socket_errno"": ""0"", ""connect_errno"": ""111"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+bubblewrap,filter,net,2,PASS,0,7.6,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+bubblewrap,full,net,2,PASS,0,8.01,,,,,,,"{""net_ns"": ""net:[4026532968]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+bubblewrap,full,hello,2,PASS,0,7.3,,,,,,,"{""hello"": ""1""}"
+bubblewrap,full,files,2,PASS,0,7.34,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+bubblewrap,full,pid,2,PASS,0,7.65,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532848]"", ""ns_pid"": ""pid:[4026532851]"", ""ns_user"": ""user:[4026532852]"", ""ns_net"": ""net:[4026532855]"", ""ns_ipc"": ""ipc:[4026532850]"", ""ns_uts"": ""uts:[4026532849]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+bubblewrap,full,csv,2,PASS,0,83.78,,,,,,,{}
+bubblewrap,full,csv_missing,2,PASS,2,74.05,,,,,,,{}
+podman,shared,net,2,PASS,0,243.75,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+podman,net,net,2,PASS,0,232.82,,,,,,,"{""net_ns"": ""net:[4026532848]"", ""socket_errno"": ""0"", ""connect_errno"": ""111"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+podman,filter,net,2,PASS,0,239.01,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+podman,full,net,2,PASS,0,237.14,,,,,,,"{""net_ns"": ""net:[4026532848]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+podman,full,hello,2,PASS,0,225.53,,,,,,,"{""hello"": ""1""}"
+podman,full,files,2,PASS,0,232.64,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+podman,full,pid,2,PASS,0,244.12,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532844]"", ""ns_pid"": ""pid:[4026532847]"", ""ns_user"": ""user:[4026532839]"", ""ns_net"": ""net:[4026532848]"", ""ns_ipc"": ""ipc:[4026532846]"", ""ns_uts"": ""uts:[4026532845]"", ""uid"": ""0"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+podman,full,csv,2,PASS,0,323.81,,,,,,,{}
+podman,full,csv_missing,2,PASS,2,290.97,,,,,,,{}
+host,shared,hello,3,PASS,0,1.52,,,,,,,"{""hello"": ""1""}"
+host,shared,files,3,PASS,0,1.76,,,,,,,"{""hidden_errno"": ""0"", ""input_read"": ""1"", ""input_write_errno"": ""0"", ""scratch_errno"": ""0""}"
+host,shared,pid,3,PASS,0,3.78,,,,,,,"{""sentinel_visible"": ""1"", ""ns_mnt"": ""mnt:[4026531832]"", ""ns_pid"": ""pid:[4026531836]"", ""ns_user"": ""user:[4026531837]"", ""ns_net"": ""net:[4026531833]"", ""ns_ipc"": ""ipc:[4026531839]"", ""ns_uts"": ""uts:[4026531838]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""0"", ""Seccomp_filters"": ""0""}"
+host,shared,net,3,PASS,0,1.94,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+host,shared,csv,3,PASS,0,19.23,,,,,,,{}
+bubblewrap,shared,net,3,PASS,0,6.46,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+bubblewrap,net,net,3,PASS,0,7.43,,,,,,,"{""net_ns"": ""net:[4026532853]"", ""socket_errno"": ""0"", ""connect_errno"": ""111"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+bubblewrap,filter,net,3,PASS,0,6.56,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+bubblewrap,full,net,3,PASS,0,7.0,,,,,,,"{""net_ns"": ""net:[4026532968]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+bubblewrap,full,hello,3,PASS,0,7.21,,,,,,,"{""hello"": ""1""}"
+bubblewrap,full,files,3,PASS,0,6.84,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+bubblewrap,full,pid,3,PASS,0,6.6,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532848]"", ""ns_pid"": ""pid:[4026532851]"", ""ns_user"": ""user:[4026533080]"", ""ns_net"": ""net:[4026532967]"", ""ns_ipc"": ""ipc:[4026532850]"", ""ns_uts"": ""uts:[4026532849]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+bubblewrap,full,csv,3,PASS,0,77.47,,,,,,,{}
+bubblewrap,full,csv_missing,3,PASS,2,118.71,,,,,,,{}
+podman,shared,net,3,PASS,0,315.44,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+podman,net,net,3,PASS,0,315.43,,,,,,,"{""net_ns"": ""net:[4026532848]"", ""socket_errno"": ""0"", ""connect_errno"": ""111"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+podman,filter,net,3,PASS,0,308.64,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+podman,full,net,3,PASS,0,296.35,,,,,,,"{""net_ns"": ""net:[4026532848]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+podman,full,hello,3,PASS,0,308.95,,,,,,,"{""hello"": ""1""}"
+podman,full,files,3,PASS,0,295.9,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+podman,full,pid,3,PASS,0,294.59,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532844]"", ""ns_pid"": ""pid:[4026532847]"", ""ns_user"": ""user:[4026532839]"", ""ns_net"": ""net:[4026532848]"", ""ns_ipc"": ""ipc:[4026532846]"", ""ns_uts"": ""uts:[4026532845]"", ""uid"": ""0"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+podman,full,csv,3,PASS,0,394.04,,,,,,,{}
+podman,full,csv_missing,3,PASS,2,378.06,,,,,,,{}
+host,shared,hello,4,PASS,0,1.97,,,,,,,"{""hello"": ""1""}"
+host,shared,files,4,PASS,0,1.73,,,,,,,"{""hidden_errno"": ""0"", ""input_read"": ""1"", ""input_write_errno"": ""0"", ""scratch_errno"": ""0""}"
+host,shared,pid,4,PASS,0,5.05,,,,,,,"{""sentinel_visible"": ""1"", ""ns_mnt"": ""mnt:[4026531832]"", ""ns_pid"": ""pid:[4026531836]"", ""ns_user"": ""user:[4026531837]"", ""ns_net"": ""net:[4026531833]"", ""ns_ipc"": ""ipc:[4026531839]"", ""ns_uts"": ""uts:[4026531838]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""0"", ""Seccomp_filters"": ""0""}"
+host,shared,net,4,PASS,0,1.99,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+host,shared,csv,4,PASS,0,24.08,,,,,,,{}
+bubblewrap,shared,net,4,PASS,0,8.97,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+bubblewrap,net,net,4,PASS,0,10.26,,,,,,,"{""net_ns"": ""net:[4026532853]"", ""socket_errno"": ""0"", ""connect_errno"": ""111"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+bubblewrap,filter,net,4,PASS,0,7.87,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+bubblewrap,full,net,4,PASS,0,7.84,,,,,,,"{""net_ns"": ""net:[4026532968]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+bubblewrap,full,hello,4,PASS,0,8.37,,,,,,,"{""hello"": ""1""}"
+bubblewrap,full,files,4,PASS,0,9.35,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+bubblewrap,full,pid,4,PASS,0,12.96,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532848]"", ""ns_pid"": ""pid:[4026532968]"", ""ns_user"": ""user:[4026532867]"", ""ns_net"": ""net:[4026532969]"", ""ns_ipc"": ""ipc:[4026532850]"", ""ns_uts"": ""uts:[4026532849]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+bubblewrap,full,csv,4,PASS,0,83.58,,,,,,,{}
+bubblewrap,full,csv_missing,4,PASS,2,86.52,,,,,,,{}
+podman,shared,net,4,PASS,0,294.56,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+podman,net,net,4,PASS,0,281.74,,,,,,,"{""net_ns"": ""net:[4026532848]"", ""socket_errno"": ""0"", ""connect_errno"": ""111"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+podman,filter,net,4,PASS,0,300.78,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+podman,full,net,4,PASS,0,293.96,,,,,,,"{""net_ns"": ""net:[4026532848]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+podman,full,hello,4,PASS,0,279.41,,,,,,,"{""hello"": ""1""}"
+podman,full,files,4,PASS,0,282.12,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+podman,full,pid,4,PASS,0,309.98,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532844]"", ""ns_pid"": ""pid:[4026532847]"", ""ns_user"": ""user:[4026532839]"", ""ns_net"": ""net:[4026532848]"", ""ns_ipc"": ""ipc:[4026532846]"", ""ns_uts"": ""uts:[4026532845]"", ""uid"": ""0"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+podman,full,csv,4,PASS,0,377.86,,,,,,,{}
+podman,full,csv_missing,4,PASS,2,372.04,,,,,,,{}
+host,shared,hello,5,PASS,0,1.73,,,,,,,"{""hello"": ""1""}"
+host,shared,files,5,PASS,0,3.13,,,,,,,"{""hidden_errno"": ""0"", ""input_read"": ""1"", ""input_write_errno"": ""0"", ""scratch_errno"": ""0""}"
+host,shared,pid,5,PASS,0,4.83,,,,,,,"{""sentinel_visible"": ""1"", ""ns_mnt"": ""mnt:[4026531832]"", ""ns_pid"": ""pid:[4026531836]"", ""ns_user"": ""user:[4026531837]"", ""ns_net"": ""net:[4026531833]"", ""ns_ipc"": ""ipc:[4026531839]"", ""ns_uts"": ""uts:[4026531838]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""0"", ""Seccomp_filters"": ""0""}"
+host,shared,net,5,PASS,0,2.72,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+host,shared,csv,5,PASS,0,21.53,,,,,,,{}
+bubblewrap,shared,net,5,PASS,0,8.93,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+bubblewrap,net,net,5,PASS,0,9.29,,,,,,,"{""net_ns"": ""net:[4026532853]"", ""socket_errno"": ""0"", ""connect_errno"": ""111"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+bubblewrap,filter,net,5,PASS,0,7.52,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+bubblewrap,full,net,5,PASS,0,9.92,,,,,,,"{""net_ns"": ""net:[4026532968]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+bubblewrap,full,hello,5,PASS,0,8.94,,,,,,,"{""hello"": ""1""}"
+bubblewrap,full,files,5,PASS,0,8.78,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+bubblewrap,full,pid,5,PASS,0,10.25,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532847]"", ""ns_pid"": ""pid:[4026532854]"", ""ns_user"": ""user:[4026532850]"", ""ns_net"": ""net:[4026532966]"", ""ns_ipc"": ""ipc:[4026532851]"", ""ns_uts"": ""uts:[4026532849]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+bubblewrap,full,csv,5,PASS,0,76.01,,,,,,,{}
+bubblewrap,full,csv_missing,5,PASS,2,95.06,,,,,,,{}
+podman,shared,net,5,PASS,0,291.44,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+podman,net,net,5,PASS,0,311.47,,,,,,,"{""net_ns"": ""net:[4026532848]"", ""socket_errno"": ""0"", ""connect_errno"": ""111"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""0""}"
+podman,filter,net,5,PASS,0,288.78,,,,,,,"{""net_ns"": ""net:[4026531833]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+podman,full,net,5,PASS,0,315.64,,,,,,,"{""net_ns"": ""net:[4026532848]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""0""}"
+podman,full,hello,5,PASS,0,307.76,,,,,,,"{""hello"": ""1""}"
+podman,full,files,5,PASS,0,294.17,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+podman,full,pid,5,PASS,0,309.1,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532844]"", ""ns_pid"": ""pid:[4026532847]"", ""ns_user"": ""user:[4026532839]"", ""ns_net"": ""net:[4026532848]"", ""ns_ipc"": ""ipc:[4026532846]"", ""ns_uts"": ""uts:[4026532845]"", ""uid"": ""0"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+podman,full,csv,5,PASS,0,364.38,,,,,,,{}
+podman,full,csv_missing,5,PASS,2,385.49,,,,,,,{}

@@ -1,0 +1,8 @@
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+7.0.0-38-generic
+CPU: 4
+bubblewrap 0.9.0
+podman version 4.9.3
+Podman rootless: true
+cgroup2fs
+active

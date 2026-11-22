@@ -1,0 +1,2707 @@
+{
+  "environment": {
+    "os": "Ubuntu 24.04.5 LTS",
+    "kernel": "7.0.0-38-generic",
+    "arch": "x86_64",
+    "cpus": 4,
+    "bubblewrap": "bubblewrap 0.9.0",
+    "podman": "podman version 4.9.3",
+    "systemd": "systemd 255 (255.4-1ubuntu8.18)",
+    "python": "Python 3.12.3",
+    "series": "timing",
+    "backend": "both",
+    "repetitions": 30,
+    "shared_only": false,
+    "created_utc": "2026-11-22T12:28:33.853767+00:00"
+  },
+  "rows": [
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": -1,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 233.89,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": -1,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.58,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": -1,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.07,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": -1,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 281.81,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": -1,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 17.52,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": -1,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 75.13,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 0,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.72,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 0,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.17,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 0,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 234.43,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 0,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 19.82,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 0,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 70.23,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 0,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 315.23,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.26,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 227.98,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.76,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 76.49,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 308.19,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 19.77,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 229.39,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.5,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.25,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 306.39,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 20.59,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 81.12,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.07,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 6.98,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 234.96,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 20.23,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 76.52,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 306.6,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 4,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.44,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 4,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 224.73,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 4,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.81,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 4,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 73.49,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 4,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 303.81,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 4,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 19.23,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 5,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 243.73,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 5,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.27,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 5,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 9.28,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 5,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 294.63,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 5,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 21.5,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 5,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 66.34,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 6,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.65,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 6,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.83,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 6,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 231.56,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 6,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 18.44,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 6,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 74.1,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 6,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 293.15,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 7,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.56,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 7,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 225.13,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 7,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.65,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 7,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 74.2,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 7,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 284.1,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 7,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 20.2,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 8,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 218.93,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 8,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.69,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 8,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.61,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 8,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 297.77,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 8,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 19.04,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 8,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 68.32,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 9,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.92,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 9,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 6.66,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 9,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 230.43,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 9,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 17.79,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 9,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 77.4,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 9,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 284.0,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 10,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.61,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 10,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 235.79,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 10,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.3,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 10,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 75.12,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 10,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 310.04,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 10,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 18.63,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 11,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 225.27,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 11,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.53,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 11,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.79,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 11,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 301.94,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 11,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 18.98,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 11,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 82.04,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 12,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.97,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 12,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.37,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 12,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 227.56,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 12,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 18.66,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 12,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 73.22,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 12,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 291.77,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 13,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.14,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 13,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 223.74,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 13,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.78,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 13,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 75.74,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 13,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 301.59,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 13,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 18.02,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 14,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 244.09,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 14,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.67,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 14,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.32,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 14,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 293.39,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 14,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 17.8,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 14,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 80.4,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 15,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.01,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 15,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 6.66,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 15,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 233.91,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 15,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 19.08,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 15,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 74.88,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 15,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 302.48,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 16,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.13,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 16,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 217.81,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 16,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.61,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 16,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 75.2,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 16,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 301.82,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 16,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 18.78,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 17,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 225.02,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 17,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.29,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 17,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.35,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 17,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 294.65,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 17,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 19.31,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 17,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 72.76,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 18,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.0,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 18,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 6.9,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 18,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 236.74,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 18,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 20.38,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 18,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 75.42,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 18,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 294.74,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 19,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.24,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 19,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 231.73,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 19,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.44,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 19,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 74.42,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 19,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 298.34,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 19,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 20.3,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 20,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 221.84,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 20,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.52,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 20,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.88,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 20,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 300.65,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 20,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 20.36,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 20,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 74.05,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 21,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.97,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 21,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.03,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 21,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 234.8,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 21,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 18.52,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 21,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 66.81,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 21,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 294.67,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 22,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 11.79,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 22,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 226.92,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 22,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.41,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 22,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 77.76,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 22,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 291.69,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 22,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 19.57,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 23,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 228.86,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 23,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.35,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 23,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.15,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 23,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 291.54,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 23,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 17.82,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 23,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 74.03,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 24,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.75,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 24,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 8.58,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 24,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 236.84,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 24,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 17.92,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 24,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 74.61,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 24,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 302.0,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 25,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.88,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 25,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 227.1,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 25,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.35,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 25,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 68.34,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 25,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 285.58,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 25,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 17.57,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 26,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 230.8,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 26,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.45,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 26,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.19,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 26,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 304.69,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 26,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 17.84,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 26,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 73.79,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 27,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.27,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 27,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 6.75,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 27,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 233.4,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 27,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 18.01,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 27,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 76.74,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 27,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 297.16,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 28,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 6.64,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 28,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 229.11,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 28,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 3.19,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 28,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 68.0,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 28,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 300.36,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 28,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 19.36,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 29,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 233.74,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 29,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.44,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 29,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 8.68,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 29,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 313.81,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 29,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 20.08,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 29,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 77.42,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 30,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.52,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 30,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 7.2,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 30,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 229.77,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 30,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 20.04,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 30,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 78.49,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 30,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 290.03,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    }
+  ]
+}

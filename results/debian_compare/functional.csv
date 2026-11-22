@@ -1,0 +1,37 @@
+backend,mode,case,repetition,status,returncode,elapsed_ms,limits,observation,event_delta,memory_peak_mib,in_expected_group,reason,values
+host,shared,hello,1,PASS,0,0.69,,,,,,,"{""hello"": ""1""}"
+host,shared,files,1,PASS,0,0.61,,,,,,,"{""hidden_errno"": ""0"", ""input_read"": ""1"", ""input_write_errno"": ""0"", ""scratch_errno"": ""0""}"
+host,shared,pid,1,PASS,0,0.81,,,,,,,"{""sentinel_visible"": ""1"", ""ns_mnt"": ""mnt:[4026532382]"", ""ns_pid"": ""pid:[4026532384]"", ""ns_user"": ""user:[4026532451]"", ""ns_net"": ""net:[4026532385]"", ""ns_ipc"": ""ipc:[4026532383]"", ""ns_uts"": ""uts:[4026532301]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+host,shared,net,1,PASS,0,1.01,,,,,,,"{""net_ns"": ""net:[4026532385]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""1""}"
+host,shared,csv,1,PASS,0,22.98,,,,,,,{}
+bubblewrap,shared,hello,1,PASS,0,2.53,,,,,,,"{""hello"": ""1""}"
+bubblewrap,shared,files,1,PASS,0,2.35,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+bubblewrap,shared,pid,1,PASS,0,2.53,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532318]"", ""ns_pid"": ""pid:[4026532324]"", ""ns_user"": ""user:[4026532325]"", ""ns_net"": ""net:[4026532385]"", ""ns_ipc"": ""ipc:[4026532323]"", ""ns_uts"": ""uts:[4026532322]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+bubblewrap,shared,net,1,PASS,0,2.84,,,,,,,"{""net_ns"": ""net:[4026532385]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""1""}"
+bubblewrap,shared,csv,1,PASS,0,68.22,,,,,,,{}
+bubblewrap,filter,net,1,PASS,0,2.68,,,,,,,"{""net_ns"": ""net:[4026532385]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""1""}"
+bubblewrap,shared,csv_missing,1,PASS,2,48.49,,,,,,,{}
+host,shared,hello,2,PASS,0,0.64,,,,,,,"{""hello"": ""1""}"
+host,shared,files,2,PASS,0,0.58,,,,,,,"{""hidden_errno"": ""0"", ""input_read"": ""1"", ""input_write_errno"": ""0"", ""scratch_errno"": ""0""}"
+host,shared,pid,2,PASS,0,0.58,,,,,,,"{""sentinel_visible"": ""1"", ""ns_mnt"": ""mnt:[4026532382]"", ""ns_pid"": ""pid:[4026532384]"", ""ns_user"": ""user:[4026532451]"", ""ns_net"": ""net:[4026532385]"", ""ns_ipc"": ""ipc:[4026532383]"", ""ns_uts"": ""uts:[4026532301]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+host,shared,net,2,PASS,0,1.15,,,,,,,"{""net_ns"": ""net:[4026532385]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""1""}"
+host,shared,csv,2,PASS,0,22.47,,,,,,,{}
+bubblewrap,shared,hello,2,PASS,0,2.3,,,,,,,"{""hello"": ""1""}"
+bubblewrap,shared,files,2,PASS,0,2.21,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+bubblewrap,shared,pid,2,PASS,0,2.33,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532319]"", ""ns_pid"": ""pid:[4026532325]"", ""ns_user"": ""user:[4026532327]"", ""ns_net"": ""net:[4026532385]"", ""ns_ipc"": ""ipc:[4026532324]"", ""ns_uts"": ""uts:[4026532323]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+bubblewrap,shared,net,2,PASS,0,2.74,,,,,,,"{""net_ns"": ""net:[4026532385]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""1""}"
+bubblewrap,shared,csv,2,PASS,0,62.88,,,,,,,{}
+bubblewrap,filter,net,2,PASS,0,2.68,,,,,,,"{""net_ns"": ""net:[4026532385]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""1""}"
+bubblewrap,shared,csv_missing,2,PASS,2,60.13,,,,,,,{}
+host,shared,hello,3,PASS,0,0.68,,,,,,,"{""hello"": ""1""}"
+host,shared,files,3,PASS,0,0.62,,,,,,,"{""hidden_errno"": ""0"", ""input_read"": ""1"", ""input_write_errno"": ""0"", ""scratch_errno"": ""0""}"
+host,shared,pid,3,PASS,0,0.62,,,,,,,"{""sentinel_visible"": ""1"", ""ns_mnt"": ""mnt:[4026532382]"", ""ns_pid"": ""pid:[4026532384]"", ""ns_user"": ""user:[4026532451]"", ""ns_net"": ""net:[4026532385]"", ""ns_ipc"": ""ipc:[4026532383]"", ""ns_uts"": ""uts:[4026532301]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+host,shared,net,3,PASS,0,0.82,,,,,,,"{""net_ns"": ""net:[4026532385]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""1""}"
+host,shared,csv,3,PASS,0,15.36,,,,,,,{}
+bubblewrap,shared,hello,3,PASS,0,2.95,,,,,,,"{""hello"": ""1""}"
+bubblewrap,shared,files,3,PASS,0,2.3,,,,,,,"{""hidden_errno"": ""2"", ""input_read"": ""1"", ""input_write_errno"": ""30"", ""scratch_errno"": ""0""}"
+bubblewrap,shared,pid,3,PASS,0,2.46,,,,,,,"{""sentinel_visible"": ""0"", ""ns_mnt"": ""mnt:[4026532320]"", ""ns_pid"": ""pid:[4026532330]"", ""ns_user"": ""user:[4026532331]"", ""ns_net"": ""net:[4026532385]"", ""ns_ipc"": ""ipc:[4026532327]"", ""ns_uts"": ""uts:[4026532326]"", ""uid"": ""1000"", ""CapEff"": ""0000000000000000"", ""NoNewPrivs"": ""1"", ""Seccomp_filters"": ""1""}"
+bubblewrap,shared,net,3,PASS,0,2.31,,,,,,,"{""net_ns"": ""net:[4026532385]"", ""socket_errno"": ""0"", ""connect_errno"": ""0"", ""ipv6_socket_errno"": ""0"", ""unix_socket_errno"": ""1""}"
+bubblewrap,shared,csv,3,PASS,0,49.6,,,,,,,{}
+bubblewrap,filter,net,3,PASS,0,3.17,,,,,,,"{""net_ns"": ""net:[4026532385]"", ""socket_errno"": ""1"", ""ipv6_socket_errno"": ""1"", ""unix_socket_errno"": ""1""}"
+bubblewrap,shared,csv_missing,3,PASS,2,50.87,,,,,,,{}

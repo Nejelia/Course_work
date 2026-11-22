@@ -1,0 +1,177 @@
+{
+  "environment": {
+    "os": "Ubuntu 24.04.5 LTS",
+    "kernel": "7.0.0-38-generic",
+    "arch": "x86_64",
+    "cpus": 4,
+    "bubblewrap": "bubblewrap 0.9.0",
+    "podman": "podman version 4.9.3",
+    "systemd": "systemd 255 (255.4-1ubuntu8.18)",
+    "python": "Python 3.12.3",
+    "series": "check",
+    "backend": "both",
+    "repetitions": 5,
+    "shared_only": false,
+    "created_utc": "2026-11-22T11:41:28.306874+00:00"
+  },
+  "rows": [
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 8.01,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 73.99,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-d0ff64371b1b.service\npayload_started=1\nchildren=24\nfork_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 315.23,
+      "child_group": "",
+      "values": {
+        "lab_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-d0ff64371b1b.service",
+        "payload_started": "1",
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 59769\nuser_usec 40895\nsystem_usec 18874\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9773056"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 81518\nuser_usec 46736\nsystem_usec 34781\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 3\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "13402112"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-d0ff64371b1b.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-d0ff64371b1b.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "observation": 24,
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "hello",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 235.43,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "csv",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 307.35,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "podman",
+      "mode": "full",
+      "case": "tasks",
+      "repetition": 1,
+      "limits": {
+        "memory_mib": 256,
+        "pids": 64,
+        "cpu_pct": 100
+      },
+      "returncode": 0,
+      "stdout": "lab_group=/\npayload_started=1\nchildren=24\nfork_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 526.44,
+      "child_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-353db98bd677.service",
+      "values": {
+        "lab_group": "/",
+        "payload_started": "1",
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "cgroup": {
+        "before": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 58733\nuser_usec 40185\nsystem_usec 18547\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "9748480"
+        },
+        "after": {
+          "memory.max": "268435456",
+          "memory.swap.max": "0",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0",
+          "pids.max": "64",
+          "pids.events": "max 0",
+          "cpu.max": "100000 100000",
+          "cpu.stat": "usage_usec 300612\nuser_usec 120727\nsystem_usec 179884\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 5\nnr_throttled 1\nthrottled_usec 13691\nnr_bursts 0\nburst_usec 0",
+          "memory.peak": "29982720"
+        }
+      },
+      "expected_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-353db98bd677.service",
+      "actual_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-353db98bd677.service",
+      "in_expected_group": true,
+      "systemd_stderr": "",
+      "event_delta": 0,
+      "observation": 24,
+      "status": "PASS"
+    }
+  ]
+}

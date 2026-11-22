@@ -1,0 +1,2266 @@
+{
+  "environment": {
+    "started_utc": "2026-11-21T21:26:28.351594+00:00",
+    "os": "Debian GNU/Linux 13 (trixie)",
+    "kernel": "6.18.57",
+    "architecture": "x86_64",
+    "python": "3.12.14",
+    "bubblewrap": "bubblewrap 0.12.0",
+    "systemd": "systemd 257 (257.13-1~deb13u1)",
+    "net_backend": "unshare",
+    "unshare": "unshare from util-linux 2.41.5",
+    "cgroup_mount_present": false,
+    "host_namespaces": {
+      "mnt": "mnt:[4026532385]",
+      "pid": "pid:[4026532387]",
+      "user": "user:[4026532454]",
+      "net": "net:[4026532388]",
+      "ipc": "ipc:[4026532386]",
+      "uts": "uts:[4026532301]"
+    },
+    "repetitions": 5,
+    "smoke": true
+  },
+  "rows": [
+    {
+      "repetition": 1,
+      "profile": 0,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 0,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 0,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026532385]",
+        "ns_pid": "pid:[4026532387]",
+        "ns_user": "user:[4026532454]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532386]",
+        "ns_uts": "uts:[4026532301]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026532385]\nns_pid=pid:[4026532387]\nns_user=user:[4026532454]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532386]\nns_uts=uts:[4026532301]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 0,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 1,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 1,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 1,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532315]",
+        "ns_pid": "pid:[4026532320]",
+        "ns_user": "user:[4026532321]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532319]",
+        "ns_uts": "uts:[4026532318]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532315]\nns_pid=pid:[4026532320]\nns_user=user:[4026532321]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532319]\nns_uts=uts:[4026532318]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 1,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 2,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 2,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 2,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532325]",
+        "ns_pid": "pid:[4026532457]",
+        "ns_user": "user:[4026532459]",
+        "ns_net": "net:[4026532322]",
+        "ns_ipc": "ipc:[4026532352]",
+        "ns_uts": "uts:[4026532326]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532325]\nns_pid=pid:[4026532457]\nns_user=user:[4026532459]\nns_net=net:[4026532322]\nns_ipc=ipc:[4026532352]\nns_uts=uts:[4026532326]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 2,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "101",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=101\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 3,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 3,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 3,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532314]",
+        "ns_pid": "pid:[4026532321]",
+        "ns_user": "user:[4026532322]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532318]",
+        "ns_uts": "uts:[4026532315]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "2"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532314]\nns_pid=pid:[4026532321]\nns_user=user:[4026532322]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532318]\nns_uts=uts:[4026532315]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=2\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 3,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 3,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 3,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 3,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 3,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1199517"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1199517\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9996,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532320]",
+        "ns_pid": "pid:[4026532522]",
+        "ns_user": "user:[4026532527]",
+        "ns_net": "net:[4026532319]",
+        "ns_ipc": "ipc:[4026532487]",
+        "ns_uts": "uts:[4026532321]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "2"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532320]\nns_pid=pid:[4026532522]\nns_user=user:[4026532527]\nns_net=net:[4026532319]\nns_ipc=ipc:[4026532487]\nns_uts=uts:[4026532321]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=2\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 1,
+      "profile": 4,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1197572"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1197572\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.998,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 0,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 0,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 0,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026532385]",
+        "ns_pid": "pid:[4026532387]",
+        "ns_user": "user:[4026532454]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532386]",
+        "ns_uts": "uts:[4026532301]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026532385]\nns_pid=pid:[4026532387]\nns_user=user:[4026532454]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532386]\nns_uts=uts:[4026532301]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 0,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 1,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 1,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 1,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532318]",
+        "ns_pid": "pid:[4026532323]",
+        "ns_user": "user:[4026532324]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532321]",
+        "ns_uts": "uts:[4026532319]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532318]\nns_pid=pid:[4026532323]\nns_user=user:[4026532324]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532321]\nns_uts=uts:[4026532319]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 1,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 2,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 2,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 2,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532318]",
+        "ns_pid": "pid:[4026532326]",
+        "ns_user": "user:[4026532352]",
+        "ns_net": "net:[4026532324]",
+        "ns_ipc": "ipc:[4026532325]",
+        "ns_uts": "uts:[4026532323]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532318]\nns_pid=pid:[4026532326]\nns_user=user:[4026532352]\nns_net=net:[4026532324]\nns_ipc=ipc:[4026532325]\nns_uts=uts:[4026532323]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 2,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "101",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=101\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 3,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 3,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 3,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532319]",
+        "ns_pid": "pid:[4026532322]",
+        "ns_user": "user:[4026532323]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532321]",
+        "ns_uts": "uts:[4026532320]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "2"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532319]\nns_pid=pid:[4026532322]\nns_user=user:[4026532323]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532321]\nns_uts=uts:[4026532320]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=2\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 3,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 3,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 3,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 3,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 3,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1199508"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1199508\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9996,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532315]",
+        "ns_pid": "pid:[4026532459]",
+        "ns_user": "user:[4026532487]",
+        "ns_net": "net:[4026532319]",
+        "ns_ipc": "ipc:[4026532379]",
+        "ns_uts": "uts:[4026532320]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "2"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532315]\nns_pid=pid:[4026532459]\nns_user=user:[4026532487]\nns_net=net:[4026532319]\nns_ipc=ipc:[4026532379]\nns_uts=uts:[4026532320]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=2\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 2,
+      "profile": 4,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1198534"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1198534\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9988,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 0,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 0,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 0,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026532385]",
+        "ns_pid": "pid:[4026532387]",
+        "ns_user": "user:[4026532454]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532386]",
+        "ns_uts": "uts:[4026532301]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026532385]\nns_pid=pid:[4026532387]\nns_user=user:[4026532454]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532386]\nns_uts=uts:[4026532301]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 0,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 1,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 1,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 1,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532315]",
+        "ns_pid": "pid:[4026532320]",
+        "ns_user": "user:[4026532321]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532319]",
+        "ns_uts": "uts:[4026532318]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532315]\nns_pid=pid:[4026532320]\nns_user=user:[4026532321]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532319]\nns_uts=uts:[4026532318]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 1,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 2,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 2,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 2,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532523]",
+        "ns_pid": "pid:[4026532529]",
+        "ns_user": "user:[4026532530]",
+        "ns_net": "net:[4026532322]",
+        "ns_ipc": "ipc:[4026532528]",
+        "ns_uts": "uts:[4026532527]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532523]\nns_pid=pid:[4026532529]\nns_user=user:[4026532530]\nns_net=net:[4026532322]\nns_ipc=ipc:[4026532528]\nns_uts=uts:[4026532527]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 2,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "101",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=101\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 3,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 3,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 3,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532314]",
+        "ns_pid": "pid:[4026532320]",
+        "ns_user": "user:[4026532321]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532319]",
+        "ns_uts": "uts:[4026532318]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "2"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532314]\nns_pid=pid:[4026532320]\nns_user=user:[4026532321]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532319]\nns_uts=uts:[4026532318]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=2\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 3,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 3,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 3,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 3,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 3,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1199103"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1199103\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9993,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532321]",
+        "ns_pid": "pid:[4026532456]",
+        "ns_user": "user:[4026532459]",
+        "ns_net": "net:[4026532318]",
+        "ns_ipc": "ipc:[4026532455]",
+        "ns_uts": "uts:[4026532322]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "2"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532321]\nns_pid=pid:[4026532456]\nns_user=user:[4026532459]\nns_net=net:[4026532318]\nns_ipc=ipc:[4026532455]\nns_uts=uts:[4026532322]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=2\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 3,
+      "profile": 4,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1198668"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1198668\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9989,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 0,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 0,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 0,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026532385]",
+        "ns_pid": "pid:[4026532387]",
+        "ns_user": "user:[4026532454]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532386]",
+        "ns_uts": "uts:[4026532301]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026532385]\nns_pid=pid:[4026532387]\nns_user=user:[4026532454]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532386]\nns_uts=uts:[4026532301]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 0,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 1,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 1,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 1,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532318]",
+        "ns_pid": "pid:[4026532323]",
+        "ns_user": "user:[4026532324]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532320]",
+        "ns_uts": "uts:[4026532319]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532318]\nns_pid=pid:[4026532323]\nns_user=user:[4026532324]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532320]\nns_uts=uts:[4026532319]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 1,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 2,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 2,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 2,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532487]",
+        "ns_pid": "pid:[4026532525]",
+        "ns_user": "user:[4026532527]",
+        "ns_net": "net:[4026532321]",
+        "ns_ipc": "ipc:[4026532524]",
+        "ns_uts": "uts:[4026532522]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532487]\nns_pid=pid:[4026532525]\nns_user=user:[4026532527]\nns_net=net:[4026532321]\nns_ipc=ipc:[4026532524]\nns_uts=uts:[4026532522]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 2,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "101",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=101\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 3,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 3,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 3,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532314]",
+        "ns_pid": "pid:[4026532323]",
+        "ns_user": "user:[4026532325]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532320]",
+        "ns_uts": "uts:[4026532315]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "2"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532314]\nns_pid=pid:[4026532323]\nns_user=user:[4026532325]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532320]\nns_uts=uts:[4026532315]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=2\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 3,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 3,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 3,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 3,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 3,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1187344"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1187344\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9895,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532323]",
+        "ns_pid": "pid:[4026532455]",
+        "ns_user": "user:[4026532456]",
+        "ns_net": "net:[4026532320]",
+        "ns_ipc": "ipc:[4026532350]",
+        "ns_uts": "uts:[4026532324]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "2"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532323]\nns_pid=pid:[4026532455]\nns_user=user:[4026532456]\nns_net=net:[4026532320]\nns_ipc=ipc:[4026532350]\nns_uts=uts:[4026532324]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=2\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 4,
+      "profile": 4,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1193423"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1193423\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9945,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 0,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 0,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 0,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026532385]",
+        "ns_pid": "pid:[4026532387]",
+        "ns_user": "user:[4026532454]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532386]",
+        "ns_uts": "uts:[4026532301]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026532385]\nns_pid=pid:[4026532387]\nns_user=user:[4026532454]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532386]\nns_uts=uts:[4026532301]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 0,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 1,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 1,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 1,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532318]",
+        "ns_pid": "pid:[4026532323]",
+        "ns_user": "user:[4026532324]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532321]",
+        "ns_uts": "uts:[4026532319]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532318]\nns_pid=pid:[4026532323]\nns_user=user:[4026532324]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532321]\nns_uts=uts:[4026532319]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 1,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 2,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 2,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 2,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532319]",
+        "ns_pid": "pid:[4026532348]",
+        "ns_user": "user:[4026532354]",
+        "ns_net": "net:[4026532325]",
+        "ns_ipc": "ipc:[4026532347]",
+        "ns_uts": "uts:[4026532320]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532319]\nns_pid=pid:[4026532348]\nns_user=user:[4026532354]\nns_net=net:[4026532325]\nns_ipc=ipc:[4026532347]\nns_uts=uts:[4026532320]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 2,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "0",
+        "connect_errno": "101",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=0\nconnect_errno=101\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 3,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 3,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 3,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532314]",
+        "ns_pid": "pid:[4026532320]",
+        "ns_user": "user:[4026532321]",
+        "ns_net": "net:[4026532388]",
+        "ns_ipc": "ipc:[4026532319]",
+        "ns_uts": "uts:[4026532315]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "2"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532314]\nns_pid=pid:[4026532320]\nns_user=user:[4026532321]\nns_net=net:[4026532388]\nns_ipc=ipc:[4026532319]\nns_uts=uts:[4026532315]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=2\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 3,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 3,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 3,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 3,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 3,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1197555"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1197555\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.998,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "hello",
+      "returncode": 0,
+      "values": {
+        "hello": "1"
+      },
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "files",
+      "returncode": 0,
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "pid",
+      "returncode": 0,
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532322]",
+        "ns_pid": "pid:[4026532455]",
+        "ns_user": "user:[4026532456]",
+        "ns_net": "net:[4026532314]",
+        "ns_ipc": "ipc:[4026532384]",
+        "ns_uts": "uts:[4026532323]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "2"
+      },
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532322]\nns_pid=pid:[4026532455]\nns_user=user:[4026532456]\nns_net=net:[4026532314]\nns_ipc=ipc:[4026532384]\nns_uts=uts:[4026532323]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=2\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "net",
+      "returncode": 0,
+      "values": {
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "stdout": "socket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "tasks",
+      "returncode": 0,
+      "values": {
+        "children": "24",
+        "fork_errno": "0"
+      },
+      "stdout": "children=24\nfork_errno=0\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "memory16",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "16"
+      },
+      "stdout": "touched_mib=16\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "memory128",
+      "returncode": 0,
+      "values": {
+        "touched_mib": "128"
+      },
+      "stdout": "touched_mib=128\n",
+      "stderr": "",
+      "cgroup": null,
+      "status": "PASS"
+    },
+    {
+      "repetition": 5,
+      "profile": 4,
+      "test": "cpu",
+      "returncode": 0,
+      "values": {
+        "wall_us": "1200000",
+        "cpu_us": "1198487"
+      },
+      "stdout": "wall_us=1200000\ncpu_us=1198487\n",
+      "stderr": "",
+      "cgroup": null,
+      "cpu_ratio": 0.9987,
+      "status": "PASS"
+    }
+  ]
+}

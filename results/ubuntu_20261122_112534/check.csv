@@ -1,0 +1,7 @@
+backend,mode,case,repetition,status,returncode,elapsed_ms,limits,observation,event_delta,memory_peak_mib,in_expected_group,reason,values
+bubblewrap,full,hello,1,PASS,0,8.01,,,,,,,"{""hello"": ""1""}"
+bubblewrap,full,csv,1,PASS,0,73.99,,,,,,,{}
+bubblewrap,full,tasks,1,PASS,0,315.23,"{""memory_mib"": 256, ""pids"": 64, ""cpu_pct"": 100}",24,0,,True,,"{""lab_group"": ""/user.slice/user-1000.slice/user@1000.service/app.slice/coursework-study-d0ff64371b1b.service"", ""payload_started"": ""1"", ""children"": ""24"", ""fork_errno"": ""0""}"
+podman,full,hello,1,PASS,0,235.43,,,,,,,"{""hello"": ""1""}"
+podman,full,csv,1,PASS,0,307.35,,,,,,,{}
+podman,full,tasks,1,PASS,0,526.44,"{""memory_mib"": 256, ""pids"": 64, ""cpu_pct"": 100}",24,0,,True,,"{""lab_group"": ""/"", ""payload_started"": ""1"", ""children"": ""24"", ""fork_errno"": ""0""}"

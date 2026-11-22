@@ -1,0 +1,652 @@
+{
+  "environment": {
+    "os": "Debian GNU/Linux 13 (trixie)",
+    "kernel": "6.18.57",
+    "arch": "x86_64",
+    "cpus": 9,
+    "bubblewrap": "bubblewrap 0.12.0",
+    "podman": null,
+    "systemd": "systemd 257 (257.13-1~deb13u1)",
+    "python": "Python 3.13.5",
+    "series": "functional",
+    "backend": "bubblewrap",
+    "repetitions": 3,
+    "shared_only": true,
+    "created_utc": "2026-11-22T01:02:29.827462+00:00"
+  },
+  "rows": [
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "hello",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 0.69,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "files",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 0.61,
+      "child_group": "",
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "pid",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026532382]\nns_pid=pid:[4026532384]\nns_user=user:[4026532451]\nns_net=net:[4026532385]\nns_ipc=ipc:[4026532383]\nns_uts=uts:[4026532301]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "elapsed_ms": 0.81,
+      "child_group": "",
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026532382]",
+        "ns_pid": "pid:[4026532384]",
+        "ns_user": "user:[4026532451]",
+        "ns_net": "net:[4026532385]",
+        "ns_ipc": "ipc:[4026532383]",
+        "ns_uts": "uts:[4026532301]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "net",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "net_ns=net:[4026532385]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.01,
+      "child_group": "",
+      "values": {
+        "net_ns": "net:[4026532385]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "csv",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 22.98,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "hello",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.53,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "files",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 2.35,
+      "child_group": "",
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "pid",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532318]\nns_pid=pid:[4026532324]\nns_user=user:[4026532325]\nns_net=net:[4026532385]\nns_ipc=ipc:[4026532323]\nns_uts=uts:[4026532322]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.53,
+      "child_group": "",
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532318]",
+        "ns_pid": "pid:[4026532324]",
+        "ns_user": "user:[4026532325]",
+        "ns_net": "net:[4026532385]",
+        "ns_ipc": "ipc:[4026532323]",
+        "ns_uts": "uts:[4026532322]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "net",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "net_ns=net:[4026532385]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.84,
+      "child_group": "",
+      "values": {
+        "net_ns": "net:[4026532385]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "csv",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 68.22,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "filter",
+      "case": "net",
+      "repetition": 1,
+      "returncode": 0,
+      "stdout": "net_ns=net:[4026532385]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.68,
+      "child_group": "",
+      "values": {
+        "net_ns": "net:[4026532385]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "csv_missing",
+      "repetition": 1,
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "csv_error=FileNotFoundError\n",
+      "elapsed_ms": 48.49,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "hello",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 0.64,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "files",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 0.58,
+      "child_group": "",
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "pid",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026532382]\nns_pid=pid:[4026532384]\nns_user=user:[4026532451]\nns_net=net:[4026532385]\nns_ipc=ipc:[4026532383]\nns_uts=uts:[4026532301]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "elapsed_ms": 0.58,
+      "child_group": "",
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026532382]",
+        "ns_pid": "pid:[4026532384]",
+        "ns_user": "user:[4026532451]",
+        "ns_net": "net:[4026532385]",
+        "ns_ipc": "ipc:[4026532383]",
+        "ns_uts": "uts:[4026532301]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "net",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "net_ns=net:[4026532385]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "elapsed_ms": 1.15,
+      "child_group": "",
+      "values": {
+        "net_ns": "net:[4026532385]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "csv",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 22.47,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "hello",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.3,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "files",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 2.21,
+      "child_group": "",
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "pid",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532319]\nns_pid=pid:[4026532325]\nns_user=user:[4026532327]\nns_net=net:[4026532385]\nns_ipc=ipc:[4026532324]\nns_uts=uts:[4026532323]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.33,
+      "child_group": "",
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532319]",
+        "ns_pid": "pid:[4026532325]",
+        "ns_user": "user:[4026532327]",
+        "ns_net": "net:[4026532385]",
+        "ns_ipc": "ipc:[4026532324]",
+        "ns_uts": "uts:[4026532323]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "net",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "net_ns=net:[4026532385]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.74,
+      "child_group": "",
+      "values": {
+        "net_ns": "net:[4026532385]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "csv",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 62.88,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "filter",
+      "case": "net",
+      "repetition": 2,
+      "returncode": 0,
+      "stdout": "net_ns=net:[4026532385]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.68,
+      "child_group": "",
+      "values": {
+        "net_ns": "net:[4026532385]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "csv_missing",
+      "repetition": 2,
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "csv_error=FileNotFoundError\n",
+      "elapsed_ms": 60.13,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "hello",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 0.68,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "files",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "hidden_errno=0\ninput_read=1\ninput_write_errno=0\nscratch_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 0.62,
+      "child_group": "",
+      "values": {
+        "hidden_errno": "0",
+        "input_read": "1",
+        "input_write_errno": "0",
+        "scratch_errno": "0"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "pid",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "sentinel_visible=1\nns_mnt=mnt:[4026532382]\nns_pid=pid:[4026532384]\nns_user=user:[4026532451]\nns_net=net:[4026532385]\nns_ipc=ipc:[4026532383]\nns_uts=uts:[4026532301]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "elapsed_ms": 0.62,
+      "child_group": "",
+      "values": {
+        "sentinel_visible": "1",
+        "ns_mnt": "mnt:[4026532382]",
+        "ns_pid": "pid:[4026532384]",
+        "ns_user": "user:[4026532451]",
+        "ns_net": "net:[4026532385]",
+        "ns_ipc": "ipc:[4026532383]",
+        "ns_uts": "uts:[4026532301]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "net",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "net_ns=net:[4026532385]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "elapsed_ms": 0.82,
+      "child_group": "",
+      "values": {
+        "net_ns": "net:[4026532385]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "host",
+      "mode": "shared",
+      "case": "csv",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 15.36,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "hello",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "hello=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.95,
+      "child_group": "",
+      "values": {
+        "hello": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "files",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "hidden_errno=2\ninput_read=1\ninput_write_errno=30\nscratch_errno=0\n",
+      "stderr": "",
+      "elapsed_ms": 2.3,
+      "child_group": "",
+      "values": {
+        "hidden_errno": "2",
+        "input_read": "1",
+        "input_write_errno": "30",
+        "scratch_errno": "0"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "pid",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "sentinel_visible=0\nns_mnt=mnt:[4026532320]\nns_pid=pid:[4026532330]\nns_user=user:[4026532331]\nns_net=net:[4026532385]\nns_ipc=ipc:[4026532327]\nns_uts=uts:[4026532326]\nuid=1000\nCapEff=0000000000000000\nNoNewPrivs=1\nSeccomp_filters=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.46,
+      "child_group": "",
+      "values": {
+        "sentinel_visible": "0",
+        "ns_mnt": "mnt:[4026532320]",
+        "ns_pid": "pid:[4026532330]",
+        "ns_user": "user:[4026532331]",
+        "ns_net": "net:[4026532385]",
+        "ns_ipc": "ipc:[4026532327]",
+        "ns_uts": "uts:[4026532326]",
+        "uid": "1000",
+        "CapEff": "0000000000000000",
+        "NoNewPrivs": "1",
+        "Seccomp_filters": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "net",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "net_ns=net:[4026532385]\nsocket_errno=0\nconnect_errno=0\nipv6_socket_errno=0\nunix_socket_errno=1\n",
+      "stderr": "",
+      "elapsed_ms": 2.31,
+      "child_group": "",
+      "values": {
+        "net_ns": "net:[4026532385]",
+        "socket_errno": "0",
+        "connect_errno": "0",
+        "ipv6_socket_errno": "0",
+        "unix_socket_errno": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "csv",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "category,total\nbooks,120\nservices,75\n",
+      "stderr": "",
+      "elapsed_ms": 49.6,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "filter",
+      "case": "net",
+      "repetition": 3,
+      "returncode": 0,
+      "stdout": "net_ns=net:[4026532385]\nsocket_errno=1\nipv6_socket_errno=1\nunix_socket_errno=1\n",
+      "stderr": "",
+      "elapsed_ms": 3.17,
+      "child_group": "",
+      "values": {
+        "net_ns": "net:[4026532385]",
+        "socket_errno": "1",
+        "ipv6_socket_errno": "1",
+        "unix_socket_errno": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "backend": "bubblewrap",
+      "mode": "shared",
+      "case": "csv_missing",
+      "repetition": 3,
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "csv_error=FileNotFoundError\n",
+      "elapsed_ms": 50.87,
+      "child_group": "",
+      "values": {},
+      "status": "PASS"
+    }
+  ]
+}
